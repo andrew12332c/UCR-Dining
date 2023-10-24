@@ -1,10 +1,14 @@
  > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
  > Prompt text is any lines beginning with "\>"
  > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
-# \<Project title\>
+# \<UCR Dining\>
  > Your author list below should include links to all members GitHub (remove existing author).
  
- > Authors: \<[Jeffrey McDaniel](https://github.com/jmcda001)\>
+ > Authors: 
+ \<[Aidan Lok Sang Wong](https://github.com/aidanwls)\>
+ \<[Andrew Zhang](https://github.com/andrew12332c)\>
+ \<[Branton Ta](https://github.com/brandontaa)\>
+ \<[Micael Collins](https://github.com/Ding0-Dongo)\>
 
  > You will be forming a group of **FOUR** students and working on an interesting project. The project has 4 phases, each one with specific requirements. A list of proposed project ideas that have been successful in previous quarters is listed in the project specifications document on Canvas. You can select an idea from the list and start thinking about the features you will implement. If you want to propose your own original idea, you will have to contact your instructor to discuss the project and obtain written permission before you submit your project proposal (Phase 1). The project work should be divided almost equally among team members. You can of course help each other, but it needs to be clear who will be responsible for which features. Additionally, you are expected to follow Scrum patterns, specifically the use of a Scrum (Project) board, Sprints, and Scrum meetings.
 
@@ -16,6 +20,19 @@
 > * All project phases are to be submitted to this GitHub repository. You should modify this README file to reflect the different phases of the project. In addition, you should regularly hold sprint meetings with your group. You will need to hold two to three scrum/check-in meetings with your lab TA/reader at different times in addition to the final demo.
 
 ## Project Description
+ > UCR Dining is the ultimate companion to finding healthy, affordable food on campus. The user-friendly app is designed to help students and faculty discover dining options that fit their budget, nutritional needs, and schedule. As students who have lived in campus residence halls, we believe that finding dining information is far too inconvenient. Dining hall menus are difficult to come by, nutritional information is unavailable, and HUB dining is often too busy and costly. Our app will solve this issue by providing all of this information in one easily accessible location.
+ > The project will be implemented in C++ and use its standard libraries. We are also considering the OpenCV external library to detect queue lengths at restaurants, providing an estimate for wait times—this will require a lot more testing. Input involves users interacting with the UI, with output being dining information on campus.
+ > Key features:
+ > * Dining Hall menus: Users will be able to view the menus for both Lothian and Glasgow residential restaurants for the current day, and the next day.
+ > * Dining Hall schedule: Users will be able to view the opening hours for dining halls, including holidays and special events.
+ > * Campus restaurant menus and opening hours: Users will be able to view the menus and hours of operation for each restaurant on campus, including prices and images if applicable. These menus do not need to be updated like the dining hall ones as most restaurants have standard menus. 
+ > * Nutritional information: Users will be able to view nutritional information (an estimate for dining hall food) for all available food options on campus.
+ > * Queue times: Users will be able to view an estimated queue time for each restaurant. (If OpenCV can be implemented, facial detection can be utilized. Otherwise, the data can be collected based on restaurant traffic trends).
+ > * Sorting: Users will be able to sort all food options by price, nutrition (calories, protein etc.), distance from user, and opening hours.
+ > * Recommendations: Users will be able to receive menu recommendations based on selected menu items, price, or nutrition.
+ > * Estimation: Users will be able to receive an estimate of how long their dining dollars will last based on selected menu items.
+ > * User-friendly UI: Users will be able to easily navigate the application to find the information they need.
+
  > Your project description should summarize the project you are proposing. Be sure to include:
  > * Why is it important or interesting to you?
  > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
