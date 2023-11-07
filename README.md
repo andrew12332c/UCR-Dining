@@ -1,4 +1,4 @@
-> ## UCR Dining
+## UCR Dining
 > * Authors:
 <span>[Aidan Lok Sang Wong](https://github.com/aidanwls), [Andrew Zhang](https://github.com/andrew12332c), [Branton Ta](https://github.com/brandontaa), [Micael Collins](https://github.com/Ding0-Dongo)</span>
 
