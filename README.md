@@ -13,7 +13,6 @@
  > * Sorting: Users will be able to sort all food options by price, nutrition (calories, protein etc.), distance from user, and opening hours.
  > * User-friendly UI: Users will be able to easily navigate the application to find the information they need.
 
- > ## Phase II
 ## User Interface Specification
 
 
