@@ -20,62 +20,53 @@ Key features:
 
 
 ### Navigation Diagram
-> ![CS100 Navigation Diagram](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/e6bcf0f1-f968-4f36-b478-b72d303aa145)
->
-> Each box in the diagram represents a screen. Running the program will put you in the main menu, as indicated by the green circle. An arrow pointing to another box indicates that you can navigate to that screen from the origin of the arrow. Each arrow is labeled with the button that will take you to that screen. Each screen has a back option that will allow you to go to the previous screen.
+![CS100 Navigation Diagram](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/e6bcf0f1-f968-4f36-b478-b72d303aa145)
+
+Each box in the diagram represents a screen. Running the program will put you in the main menu, as indicated by the green circle. An arrow pointing to another box indicates that you can navigate to that screen from the origin of the arrow. Each arrow is labeled with the button that will take you to that screen. Each screen has a back option that will allow you to go to the previous screen.
 
 ### Screen Layouts
-> Include the layout of each of your screens. The layout should describe the screen’s major components such as menus and prompts for user inputs, expected output, and buttons (if applicable). Explain what is on the layout, and the purpose of each menu item, button, etc. If many screens share the same layout, start by describing the general layout and then list the screens that will be using that layout and the differences between each of them.
-> 
-> ![CS100 Screen Layouts - Main Menu](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/8041fec2-1dc6-4e4c-a4b2-73e85b5d4229)
-> 
-> This is the main menu. From the first page, you can navigate to view either dining halls or other on-campus restaurants. 
-> 
-> ![CS100 Screen Layouts - Dining Halls](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/44887ca4-2009-4b07-a25a-14309e3ae575)
-> 
-> Clicking on dining halls takes you to this page. You can then choose between the Lothian and Glasgow dining halls.
-> 
-> ![CS100 Screen Layouts - On Campus Restaurants](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/56d32eb8-d62d-4aaf-9410-0d2449eb7bbf)
-> 
-> Clicking on On-Campus Restaurants takes you to this page. There is a dropdown menu for a list of on-campus restaurants.
-> 
-> ![CS100 Screen Layouts - Restaurant View](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/37a82001-0a16-4b78-ab8b-a1dbb413f8c4)
-> 
-> Once you select a restaurant/dining hall, you can navigate to view the restaurant's hours or menu. Selecting a dining hall/restaurant from either of the previous options will take you to this layout.
->
-> ![CS100 Screen Layouts - Opening Hours](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/a294f40e-e09c-4eac-bed8-67883c7e42dd)
-> 
-> Clicking on hours takes you to this page with a table of opening hours. Again, the screen for both dining halls and on campus restaurants will use the same layout for their details.
->
-> ![CS100 Screen Layouts - Restaurant Menu](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/4abab8aa-9917-4291-858e-c4bafe32e8bf)
-> 
-> Clicking on menu takes you to this page. Each item on the dropdown menu is clickable, which will take you to the next page. The menu can also be sorted by calories, protein and price. For dining hall menus, sorting by price will not be available. Instead, there will be a single price listed for entry. 
->
-> ![CS100 Screen Layouts - Dish View](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/7e5d8b79-6076-4142-9480-4d05a6c3d277)
-> 
-> Clicking on an item in the menu takes you to this page, where the price and nutritional information is listed. For dining hall items, the layout will be similar but without a price. 
->
-> ![CS100 Screen Layouts - Sorted Menu](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/82bd2d39-de3d-483a-a6a5-8ee5fe506880)
-> 
-> If a sorting method is selected, this is what the sorted menu looks like. 
->
-> ![CS100 Screen Layouts - Allergies View](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/00736e0b-8181-4998-8ee0-5c7b6bd3bd7e)
-> 
-> Clicking on allergies for a dish will take you to this page.
+Include the layout of each of your screens. The layout should describe the screen’s major components such as menus and prompts for user inputs, expected output, and buttons (if applicable). Explain what is on the layout, and the purpose of each menu item, button, etc. If many screens share the same layout, start by describing the general layout and then list the screens that will be using that layout and the differences between each of them.
+
+![CS100 Screen Layouts - Main Menu](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/8041fec2-1dc6-4e4c-a4b2-73e85b5d4229)
+
+This is the main menu. From the first page, you can navigate to view either dining halls or other on-campus restaurants. 
+ 
+![CS100 Screen Layouts - Dining Halls](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/44887ca4-2009-4b07-a25a-14309e3ae575)
+
+Clicking on dining halls takes you to this page. You can then choose between the Lothian and Glasgow dining halls.
+
+![CS100 Screen Layouts - On Campus Restaurants](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/56d32eb8-d62d-4aaf-9410-0d2449eb7bbf)
+
+Clicking on On-Campus Restaurants takes you to this page. There is a dropdown menu for a list of on-campus restaurants.
+ 
+![CS100 Screen Layouts - Restaurant View](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/37a82001-0a16-4b78-ab8b-a1dbb413f8c4)
+
+Once you select a restaurant/dining hall, you can navigate to view the restaurant's hours or menu. Selecting a dining hall/restaurant from either of the previous options will take you to this layout.
+
+![CS100 Screen Layouts - Opening Hours](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/a294f40e-e09c-4eac-bed8-67883c7e42dd)
+
+Clicking on hours takes you to this page with a table of opening hours. Again, the screen for both dining halls and on campus restaurants will use the same layout for their details.
+
+![CS100 Screen Layouts - Restaurant Menu](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/4abab8aa-9917-4291-858e-c4bafe32e8bf)
+ 
+Clicking on menu takes you to this page. Each item on the dropdown menu is clickable, which will take you to the next page. The menu can also be sorted by calories, protein and price. For dining hall menus, sorting by price will not be available. Instead, there will be a single price listed for entry. 
+
+![CS100 Screen Layouts - Dish View](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/7e5d8b79-6076-4142-9480-4d05a6c3d277)
+
+Clicking on an item in the menu takes you to this page, where the price and nutritional information is listed. For dining hall items, the layout will be similar but without a price. 
+
+![CS100 Screen Layouts - Sorted Menu](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/82bd2d39-de3d-483a-a6a5-8ee5fe506880)
+
+If a sorting method is selected, this is what the sorted menu looks like. 
+
+![CS100 Screen Layouts - Allergies View](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/00736e0b-8181-4998-8ee0-5c7b6bd3bd7e)
+
+Clicking on allergies for a dish will take you to this page.
 
 ## Class Diagram
-> ![UML Diagram](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/b217a657-d203-493d-b649-6f0050aff056)
-> 
-> * Attached above is the UML diagram for the project.
-> * The implementation for dining halls and other on-campus restaurants are different, so abstract classes are used for dishes and restaurants.
-> * An object of the ingredient class will exist for each commonly used ingredient in the dining halls
-> * The implementation for dining hall dishes will use a vector of type ingredients to include each ingredient used in that dish.
-> * This implementation vastly improves the scalability of the project as new dishes can use the same ingredient objects.
-> * Menus for on-campus restaurants do not require this implementation, as all of the information can be retrieved from the restaurant's website.
-> * The dining hall dish-to-restaurant relationship is considered aggregation since the same dish can exist across both dining halls, but on-campus restaurants and items on those menus are considered composition as items only exist on that specific restaurant's menu.
-> * Moreover, dining hall menus need to be updated daily—this will likely be implemented using an API on the dining website—whereas other restaurants rarely have menu changes.
-> * Currently, the interface only has a single window class as tools to create an interface are still being tested.
-> * Future iterations of the UML diagram will have more detailed UI specifications.
+![UML Diagram](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/b217a657-d203-493d-b649-6f0050aff056)
+
+Attached above is the UML diagram for the project. The implementation for dining halls and other on-campus restaurants are different, so abstract classes are used for dishes and restaurants. An object of the ingredient class will exist for each commonly used ingredient in the dining halls. The implementation for dining hall dishes will use a vector of type ingredients to include each ingredient used in that dish. This implementation vastly improves the scalability of the project as new dishes can use the same ingredient objects. Menus for on-campus restaurants do not require this implementation, as all of the information can be retrieved from the restaurant's website. The dining hall dish-to-restaurant relationship is considered aggregation since the same dish can exist across both dining halls, but on-campus restaurants and items on those menus are considered composition as items only exist on that specific restaurant's menu. Moreover, dining hall menus need to be updated daily—this will likely be implemented using an API on the dining website—whereas other restaurants rarely have menu changes. Currently, the interface only has a single window class as tools to create an interface are still being tested. Future iterations of the UML diagram will have more detailed UI specifications.
 
  > ## Phase III
  > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on Zoom and should be conducted by Wednesday of week 8.
