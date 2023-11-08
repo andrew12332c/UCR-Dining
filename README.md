@@ -2,9 +2,10 @@
 > * Authors:
 <span>[Aidan Lok Sang Wong](https://github.com/aidanwls), [Andrew Zhang](https://github.com/andrew12332c), [Branton Ta](https://github.com/brandontaa), [Micael Collins](https://github.com/Ding0-Dongo)</span>
 
-## Project Description
+### Project Description
  > UCR Dining is the ultimate companion to finding healthy, affordable food on campus. The user-friendly app is designed to help students and faculty discover dining options that fit their budget, nutritional needs, and schedule. As students who have lived in campus residence halls, we believe that finding dining information is far too inconvenient. Dining hall menus are difficult to come by, nutritional information is unavailable, and HUB dining is often too busy and costly. Our app will solve this issue by providing all of this information in one easily accessible location.
  > The project will be implemented in C++ and use its standard libraries. We are also considering the OpenCV external library to detect queue lengths at restaurants, providing an estimate for wait times—this will require a lot more testing. Input involves users interacting with the UI, with output being dining information on campus.
+ >
  > Key features:
  > * Dining Hall menus and opening hours: Users will be able to view the menus and opening hours for both Lothian and Glasgow dining halls, including holidays and special events.
  > * Campus restaurant menus and opening hours: Users will be able to view the menus and hours of operation for each restaurant on campus, including prices and images if applicable. These menus do not need to be updated like the dining hall ones as most restaurants have standard menus. 
