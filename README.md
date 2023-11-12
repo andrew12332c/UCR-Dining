@@ -64,7 +64,7 @@ If a sorting method is selected, this is what the sorted menu looks like.
 Clicking on allergies for a dish will take you to this page.
 
 ## Class Diagram
-![UML Diagram](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/e740350a-5a84-4e88-a622-8353abbfaddb)
+![UML Diagram](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/3ec6e8aa-5509-440f-8e8e-ca8e949d82ac)
 
 Attached above is the UML diagram for the project. The implementation for dining halls and other on-campus restaurants are different, so abstract classes are used for dishes and restaurants. An object of the ingredient class will exist for each commonly used ingredient in the dining halls. The implementation for dining hall dishes will use a vector of type ingredients to include each ingredient used in that dish. This implementation vastly improves the scalability of the project as new dishes can use the same ingredient objects. Menus for on-campus restaurants do not require this implementation, as all of the information can be retrieved from the restaurant's website. The dining hall dish-to-restaurant relationship is considered aggregation since the same dish can exist across both dining halls, but on-campus restaurants and items on those menus are considered composition as items only exist on that specific restaurant's menu. Moreover, dining hall menus need to be updated daily—this will likely be implemented using an API on the dining website—whereas other restaurants rarely have menu changes. Currently, the interface only has a single window class as tools to create an interface are still being tested. Future iterations of the UML diagram will have more detailed UI specifications.
 
