@@ -6,17 +6,17 @@ using namespace std;
 
 class Ingredient {
   public:
-    Ingredient(string n, int c, int p): name(n), calories(c), protein(p) {};
+    Ingredient(string n, int c, int p);
 
     //Setters
-    void setName(string n) {name = n;}
-    void setCalories(int c) {calories = c;}
-    void setProtein(int p) {protein = p;}
+    void setName(string n);
+    void setCalories(int c);
+    void setProtein(int p);
 
     //Getters
-    string getName() {return name;}
-    int getCalories() {return calories;}
-    int getProtein() {return protein;}
+    string getName();
+    int getCalories();
+    int getProtein();
 
   private:
     string name;

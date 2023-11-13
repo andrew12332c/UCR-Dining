@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "../Ingredient.h"
+#include "../Ingredient.cpp"
 
 using namespace std;
 
