@@ -10,8 +10,8 @@ class RestaurantDish : public Dish {
     RestaurantDish(string n, int c, int pro, int pri);
 
     //Setters
-    void setCalories(int c);
-    void setProtein(int p);
+    void setCalories();
+    void setProtein();
 
     //Getters
     int getPrice();

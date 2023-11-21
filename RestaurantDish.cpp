@@ -7,7 +7,14 @@ RestaurantDish::RestaurantDish(string n, int c, int pro, int pri) {
     price = pri;
 }
 
-void RestaurantDish::setCalories(int c) {calories = c;}
-void RestaurantDish::setProtein(int p) {protein = p;}
+void RestaurantDish::setCalories() {
+    return;
+}
 
-int RestaurantDish::getPrice() {return price;}
+void RestaurantDish::setProtein() {
+    return;
+}
+
+int RestaurantDish::getPrice() {
+    return price;
+}
