@@ -10,8 +10,8 @@ class Dish {
   public: 
     //Setters
     void setName(string s) {name = s;}
-    virtual void setCalories(int) = 0;
-    virtual void setProtein(int) = 0;
+    virtual void setCalories() = 0;
+    virtual void setProtein() = 0;
     void addAllergy(string a) {allergies.push_back(a);}
 
     //Getters
