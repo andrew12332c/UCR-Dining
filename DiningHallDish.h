@@ -8,10 +8,11 @@ class DiningHallDish : public Dish{
     void setServingAmount(int servingAmt);
     void setCalories();
     void setProtein();
+    int getServingAmount();
     
   private:
     vector<Ingredient*> ingredientList;
-    int servingAmount;
+    int servingAmountInGrams;
 };
 
 

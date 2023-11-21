@@ -3,7 +3,7 @@
 DiningHallDish::DiningHallDish(string n, vector<Ingredient*> ingredients, int amt) {
     name = n;
     ingredientList = ingredients;
-    servingAmount = amt;
+    servingAmountInGrams = amt;
     calories = 0;
     protein = 0;
     setCalories();
@@ -15,7 +15,7 @@ void DiningHallDish::addIngredient(Ingredient* newIngredient) {
 }
 
 void DiningHallDish::setServingAmount(int servingAmt) {
-    servingAmount = servingAmt;
+    servingAmountInGrams = servingAmt;
 }
 
 void DiningHallDish::setCalories() {
@@ -28,4 +28,8 @@ void DiningHallDish::setProtein() {
     for (unsigned i = 0; i < ingredientList.size(); ++i) {
         protein += ingredientList.at(i)->getProtein();
     }
+}
+
+int DiningHallDish::getServingAmount() {
+    return servingAmountInGrams;
 }
