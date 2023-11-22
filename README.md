@@ -68,20 +68,15 @@ Clicking on allergies for a dish will take you to this page.
 
 Attached above is the UML diagram for the project. The implementation for dining halls and other on-campus restaurants are different, so abstract classes are used for dishes and restaurants. An object of the ingredient class will exist for each commonly used ingredient in the dining halls. The implementation for dining hall dishes will use a vector of type ingredients to include each ingredient used in that dish. This implementation vastly improves the scalability of the project as new dishes can use the same ingredient objects. Menus for on-campus restaurants do not require this implementation, as all of the information can be retrieved from the restaurant's website. The dining hall dish-to-restaurant relationship is considered aggregation since the same dish can exist across both dining halls, but on-campus restaurants and items on those menus are considered composition as items only exist on that specific restaurant's menu. Moreover, dining hall menus need to be updated daily—this will likely be implemented using an API on the dining website—whereas other restaurants rarely have menu changes. Currently, the interface only has a single window class as tools to create an interface are still being tested. Future iterations of the UML diagram will have more detailed UI specifications.
 
- > ## Phase III
- > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on Zoom and should be conducted by Wednesday of week 8.
- 
- > BEFORE the meeting you should do the following:
- > * Update your class diagram from Phase II to include any feedback you received from your TA/grader.
- > * Considering the SOLID design principles, reflect back on your class diagram and think about how you can use the SOLID principles to improve your design. You should then update the README.md file by adding the following:
- >   * A new class diagram incorporating your changes after considering the SOLID principles.
- >   * For each update in your class diagram, you must explain in 3-4 sentences:
- >     * What SOLID principle(s) did you apply?
- >     * How did you apply it? i.e. describe the change.
- >     * How did this change help you write better code?
- > * Perform a new sprint plan like you did in Phase II.
- > * You should also make sure that your README file (and Project board) are up-to-date reflecting the current status of your project and the most recent class diagram. Previous versions of the README file should still be visible through your commit history.
- 
+## Phase III
+
+### Updated Class Diagram
+![Updated CS100 UML Diagram](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/cd3f90eb-4ef6-4133-af44-0cc1a63bf04b)
+Several changes were made to the UML diagram. Firstly, the setCalories and setProtein methods were removed from the base Dish class and are instead defined separately in its subclasses. They were originally designed as abstract functions, but the implementation in derived classes DiningHallDish and RestaurantDish requierd different parameters. Hence, one subclass couldn't use the inherited functions and the Liskov Substitution Principle was violated. Making this change eliminates redundant code and improves readability of the affected classes. Another change made was adding the RestaurantHours class. Originally, the Restaurant class was dealing with both restaurant details and information regarding dining hours, violating the Single-Responsibiilty Principle. Separating the functionality of dining hours and queue times and delegating that to a separate class solves this issue. Moreover, the Restaurant class and its subclasses violated the Single-Responsibility Principle more than once, as they originally handled sorting on top of creating DiningHall and CampusRestaurant objects. To fix this, a SortMenu class was created to take up all sorting functionality. The final change was adding the BuildDiningHalls and BuildCampusRestaurants classes. Their function is to create DiningHall and CampusRestaurant classes respectively with the information of UCR dining options. This implementation was originally going to be done in main(), but having classes take on this functionality will greatly improve readability. 
+
+A couple SOLID principles were already satisfied. The Interface Segregation Principle was met through separating the implementation of dining halls and on-campus restaurants. Using an abstract base Dish class allows for the subclasses to inherit elements that overlap, but only the RestarauntDish class implements price, which isn't applicable to the DiningHallDish class. Using this layer of abstraction prevents the DiningHallDish class from implementing methods only RestaurantDish will use, and vice versa. This abstraction also meets the Open-Closed Principle, as adding a new restaurant will go through the respective subclass, leaving the Restaurant class unaffected.
+
+
 > During the meeting with your reader you will discuss: 
  > * How effective your last sprint was (each member should talk about what they did)
  > * Any tasks that did not get completed last sprint, and how you took them into consideration for this sprint
