@@ -1,9 +1,7 @@
-#ifndef RESTAURANTDISH_H
-#define RESTAURANTDISH_H
+#ifndef RESTAURANT_DISH_H
+#define RESTAURANT_DISH_H
 
 #include "Dish.h"
-
-using namespace std;
 
 class RestaurantDish : public Dish {
   public:
