@@ -1,3 +1,6 @@
+#ifndef DINING_HALL_DISH_H
+#define DININNG_HALL_DISH_H
+
 #include "Dish.h"
 #include "Ingredient.h"
 
@@ -15,4 +18,4 @@ class DiningHallDish : public Dish{
     int servingAmountInGrams;
 };
 
-
+#endif

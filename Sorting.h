@@ -1,23 +1,21 @@
 #ifndef SORTING_H
 #define SORTING
 
-#include "Dish.h"
 #include <vector>
-#include <string>
 
 using namespace std;
 
-class Sorting {
+template <typename T> class Sorting {
     public: 
-        void proteinSortingHiLo(vector<Dish*>& vect);
-        void proteinSortingLoHi(vector<Dish*>& vect);
-        void calorieSortingHiLo(vector<Dish*>& vect);
-        void calorieSortingLoHi(vector<Dish*>& vect);
-        void priceSortingLoHi(vector<Dish*>& vect);
-        void priceSortingHiLo(vector<Dish*>& vect);
+        void proteinSortingHiLo(vector<T*>& vect);
+        void proteinSortingLoHi(vector<T*>& vect);
+        void calorieSortingHiLo(vector<T*>& vect);
+        void calorieSortingLoHi(vector<T*>& vect);
+        void priceSortingLoHi(vector<T*>& vect);
+        void priceSortingHiLo(vector<T*>& vect);
     private:
-        void lowToHigh(vector<Dish*>& vect);
-        void highToLow(vector<Dish*>& vect);
+        void lowToHigh(vector<T*>& vect);
+        void highToLow(vector<T*>& vect);
 };
 
 #endif

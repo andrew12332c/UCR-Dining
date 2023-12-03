@@ -1,45 +1,45 @@
 #include "Sorting.h"
 
-void Sorting::proteinSortingHiLo(vector<Dish*>& dishes) {
+template <typename T> void Sorting<T>::proteinSortingHiLo(vector<T*>& dishes) {
     highToLow(dishes);
 }
 
-void Sorting::calorieSortingHiLo(vector<Dish*>& dishes) {
+template <typename T> void Sorting<T>::calorieSortingHiLo(vector<T*>& dishes) {
     highToLow(dishes);
 }
 
-void Sorting::priceSortingHiLo(vector<Dish*>& dishes) {
+template <typename T> void Sorting<T>::priceSortingHiLo(vector<T*>& dishes) {
     highToLow(dishes);
 }
 
-void Sorting::proteinSortingLoHi(vector<Dish*>& dishes) {
+template <typename T> void Sorting<T>::proteinSortingLoHi(vector<T*>& dishes) {
     lowToHigh(dishes);
 }
 
-void Sorting::calorieSortingLoHi(vector<Dish*>& dishes) {
+template <typename T> void Sorting<T>::calorieSortingLoHi(vector<T*>& dishes) {
     lowToHigh(dishes);
 }
 
-void Sorting::priceSortingLoHi(vector<Dish*>& dishes) {
+template <typename T> void Sorting<T>::priceSortingLoHi(vector<T*>& dishes) {
     lowToHigh(dishes);
 }
 
 // private helper functions
-void Sorting::lowToHigh(vector<Dish*>& dishes) {
-    for (int i = 0; i < dishes.size(); ++i) {
+template <typename T> void Sorting<T>::lowToHigh(vector<T*>& dishes) {
+    for (int i = 0; i < this->dishes.size(); ++i) {
         for (int j = i + 1; j < dishes.size(); ++j) {
-            if (dishes.at(i) < dishes.at(j)) {
-                swap(dishes.at(i), dishes.at(j));
+            if (this->dishes.at(i) < this->dishes.at(j)) {
+                swap(this->dishes.at(i), this->dishes.at(j));
             }
         }
     }
 }
 
-void Sorting::highToLow(vector<Dish*>& dishes) {
-    for (int i = 0; i < dishes.size(); ++i) {
-        for (int j = i + 1; j < dishes.size(); ++j) {
-            if (dishes.at(i) > dishes.at(j)) {
-                swap(dishes.at(i), dishes.at(j));
+template <typename T> void Sorting<T>::highToLow(vector<T*>& dishes) {
+    for (int i = 0; i < this->dishes.size(); ++i) {
+        for (int j = i + 1; j < this->dishes.size(); ++j) {
+            if (this->dishes.at(i) > this->dishes.at(j)) {
+                swap(this->dishes.at(i), this->dishes.at(j));
             }
         }
     }

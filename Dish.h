@@ -1,5 +1,5 @@
 #ifndef DISH_H
-#define DISH
+#define DISH_H
 
 #include <vector>
 #include <string>
