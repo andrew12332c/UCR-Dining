@@ -10,41 +10,56 @@
 #include <vector>
 #include <string>
 
+//g++ -o tester main.cpp
 using namespace std;
-
-// int main(int argc, char *argv[])
-// {
-//     QApplication a(argc, argv);
-//     MainWindow w;
-//     w.show();
-//     return a.exec();
-// }
 int main(){
+ 
+  int eatlocation;
+  while (true) {
+    cout << "Select an option:" << endl;
+    cout << "1. Restaurants" << endl;
+    cout << "2. Dining Halls" << endl;
+    
+    // Check if the input is a valid number
+    if (!(cin >> eatlocation)) {
+        // Invalid input, clear the error flag and discard the input buffer
+        cin.clear();
+        cout << "Invalid input. Please enter a number." << endl;
+    } else {
+        // Valid input, break out of the loop
+        break;
+    }
+}
 
-  vector<Restaurant> restaurants;
-  
-    Restaurant applebees;
-      applebees.setName("Applebee's");
-      applebees.setLocation("123 Main St");  
-      restaurants.push_back(applebees);
 
-    // Restaurant oliveGarden;
-    //   oliveGarden.setName("Olive Garden");
-    //   oliveGarden.setLocation("456 Park Rd"); 
-    // restaurants.push_back(oliveGarden);
+  vector<Restaurant> campsrestaurants;
+    Restaurant pandaexpress;
+      pandaexpress.setName("Panda Express's");
+      pandaexpress.setLocation("900 University Ave");  
+      campsrestaurants.push_back(pandaexpress);
+  vector<Restaurant> dininghalls;
+    Restaurant Glasglow;
+      Glasglow.setName("Glasglow");
+      Glasglow.setLocation("680 W Linden St");  
+      dininghalls.push_back(Glasglow);
+      vector<Restaurant>* ptrToVector = nullptr;
+         // Choose the vector based on user input
+    vector<Restaurant>& chosenVector = (eatlocation == 1) ? campsrestaurants : dininghalls;
 
-  cout << "Restaurant: " << endl; 
-  int i =0;
-   cout << i+1 << ". "; 
-  // cout << restaurant.getName() << " (" << restaurant.getLocation() << ")" << endl;
-  cout << applebees.getName() << " (" << applebees.getLocation() << ")" << endl;
-  // Get user's choice
-  int choice;
-  cout << "Please pick your resturant: " << endl; 
-  cin >> choice;
-  Restaurant selectedRestaurant = restaurants[choice-1];
-  // Print out choice  
-  cout << "You picked: " << selectedRestaurant.getName()  << endl; 
-
+    // Display the available restaurants or dining halls
+    for (int i = 0; i < chosenVector.size(); ++i) {
+        cout << i + 1 << ". " << chosenVector[i].getName() << " (" << chosenVector[i].getLocation() << ")" << endl;
+    }
+    int choice;
+    cout << "Please pick your resturant: " << endl; 
+    cin >> choice;
+    if (choice >= 1 && choice <= chosenVector.size()) {
+        Restaurant selectedRestaurant = chosenVector[choice - 1];
+        // Print out the chosen restaurant
+        cout << "You picked: " << selectedRestaurant.getName() << " (" << selectedRestaurant.getLocation() << ")" << endl;
+    } else {
+        cout << "Invalid choice. Please pick a valid option." << endl;
+    }
+    
   return 0;
 }
