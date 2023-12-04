@@ -3,6 +3,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/testExecutables")
 add_subdirectory(googletest)
 
 add_executable(runAllTests
+  src/Dish.cpp
   test/DiningHallDishTest.cpp
   test/RestaurantDishTest.cpp
   test/IngredientTest.cpp
