@@ -13,7 +13,7 @@ class Restaurant{
     Restaurant();
     void setLocation(string loc);
     void setName(string restName);
-
+    
     string getLocation();
     string getName();
 
