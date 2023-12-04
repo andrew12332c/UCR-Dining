@@ -9,7 +9,7 @@
 #include <iostream> 
 #include <vector>
 #include <string>
-
+#include <limits>
 //g++ -o tester main.cpp
 using namespace std;
 int main(){
@@ -51,15 +51,38 @@ int main(){
         cout << i + 1 << ". " << chosenVector[i].getName() << " (" << chosenVector[i].getLocation() << ")" << endl;
     }
     int choice;
+
+  while(true){
     cout << "Please pick your resturant: " << endl; 
     cin >> choice;
     if (choice >= 1 && choice <= chosenVector.size()) {
-        Restaurant selectedRestaurant = chosenVector[choice - 1];
-        // Print out the chosen restaurant
-        cout << "You picked: " << selectedRestaurant.getName() << " (" << selectedRestaurant.getLocation() << ")" << endl;
+      Restaurant selectedRestaurant = chosenVector[choice - 1];
+      // Print out the chosen restaurant
+      cout << "You picked: " << selectedRestaurant.getName() << " (" << selectedRestaurant.getLocation() << ")" << endl;
+      break;
     } else {
         cout << "Invalid choice. Please pick a valid option." << endl;
+      cin.clear();
+      cin.ignore(numeric_limits<streamsize>::max(), '\n');
     }
-    
+  }
+  int hoursormenu=0;
+  while(true){
+    cout << "Select an option:" << endl;
+    cout << "1. View Menu" << endl;
+    cout << "2. View Hours" << endl;
+    cin >> hoursormenu;
+    if(hoursormenu== 1 || hoursormenu ==2){
+      break;
+    }
+    else{
+      cout << hoursormenu<< "is not a valid input. Please only put a number (1,2)"<<endl;
+      cin.clear();
+      cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
+  }
+  
   return 0;
 }
+
+
