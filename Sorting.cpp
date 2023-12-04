@@ -1,26 +1,33 @@
 #include "Sorting.h"
 
-template <typename T> void Sorting<T>::proteinSortingHiLo(vector<T*>& dishes) {
+template <typename T> void Sorting<T>::sortProteinHiLo(vector<T*>& dishes) {
     highToLow(dishes);
 }
 
-template <typename T> void Sorting<T>::calorieSortingHiLo(vector<T*>& dishes) {
-    highToLow(dishes);
-}
-
-template <typename T> void Sorting<T>::priceSortingHiLo(vector<T*>& dishes) {
-    highToLow(dishes);
-}
-
-template <typename T> void Sorting<T>::proteinSortingLoHi(vector<T*>& dishes) {
+template <typename T> void Sorting<T>::sortProteinLoHi(vector<T*>& dishes) {
     lowToHigh(dishes);
 }
 
-template <typename T> void Sorting<T>::calorieSortingLoHi(vector<T*>& dishes) {
+template <typename T> void Sorting<T>::sortCaloriesHiLo(vector<T*>& dishes) {
+    highToLow(dishes);
+}
+template <typename T> void Sorting<T>::sortCaloriesLoHi(vector<T*>& dishes) {
     lowToHigh(dishes);
 }
 
-template <typename T> void Sorting<T>::priceSortingLoHi(vector<T*>& dishes) {
+template <typename T> void Sorting<T>::sortPriceHiLo(vector<T*>& dishes) {
+    highToLow(dishes);
+}
+
+template <typename T> void Sorting<T>::sortPriceLoHi(vector<T*>& dishes) {
+    lowToHigh(dishes);
+}
+
+template <typename T> void Sorting<T>::sortAToZ(vector<T*>& dishes) {
+    highToLow(dishes);
+}
+
+template <typename T> void Sorting<T>::sortZToA(vector<T*>& dishes) {
     lowToHigh(dishes);
 }
 
