@@ -1,4 +1,4 @@
-#include "DiningHallDish.h"
+#include "../include/DiningHallDish.h"
 
 DiningHallDish::DiningHallDish(string n, vector<Ingredient*> ingredients, int amt) {
     name = n;

@@ -1,4 +1,4 @@
-#include "Restaurant.h"
+#include "../include/Restaurant.h"
 #include <string>
 
 using namespace std;
@@ -6,6 +6,11 @@ using namespace std;
 Restaurant::Restaurant(){
     location = "none";
     name = "noname";
+}
+
+Restaurant::Restaurant(string loc, string restName){
+    location = loc;
+    name = restName;
 }
 
 void Restaurant::setLocation(string loc){

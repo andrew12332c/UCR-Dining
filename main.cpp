@@ -1,11 +1,12 @@
-#include "mainwindow.h"
+#include "src/DiningHallDish.cpp"
+#include "src/Ingredient.cpp"
+#include "src/layout.cpp"
+#include "src/RestaurantDish.cpp"
+#include "src/RestaurantHours.cpp"
+#include "src/Sorting.cpp"
 
-#include <QApplication>
-
-int main(int argc, char *argv[])
-{
-    QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
-    return a.exec();
+int main()
+{   
+    
+    return 0;
 }

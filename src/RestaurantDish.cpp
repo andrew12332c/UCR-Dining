@@ -1,4 +1,4 @@
-#include "RestaurantDish.h"
+#include "../include/RestaurantDish.h"
 
 RestaurantDish::RestaurantDish(string n, int c, int pro, int pri) {
     setName(n);

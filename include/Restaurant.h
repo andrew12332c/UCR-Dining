@@ -11,6 +11,7 @@ using namespace std;
 class Restaurant{
   public: 
     Restaurant();
+    Restaurant(string loc, string restName);
     void setLocation(string loc);
     void setName(string restName);
 

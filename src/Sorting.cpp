@@ -1,4 +1,4 @@
-#include "Sorting.h"
+#include "../include/Sorting.h"
 
 template <typename T> void Sorting<T>::proteinSortingHiLo(vector<T*>& dishes) {
     highToLow(dishes);

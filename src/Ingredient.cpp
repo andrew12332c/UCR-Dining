@@ -1,4 +1,4 @@
-#include "Ingredient.h"
+#include "../include/Ingredient.h"
 #include <string>
 
 Ingredient::Ingredient(string n, int c, int p) {

@@ -1,7 +1,7 @@
 #ifndef RESTAURANT_DISH_H
 #define RESTAURANT_DISH_H
 
-#include "Dish.h"
+#include "../include/Dish.h"
 
 class RestaurantDish : public Dish {
   public:
