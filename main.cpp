@@ -75,7 +75,7 @@ int main(){
       cout << "Please pick your restaurant: " << endl;
       cin >> choice;
 
-      if (choice == 888) {
+      if (choice == 888) {o
           break; // Go back to the main menu
       }
       else if (choice >= 1 && choice <= chosenVector->size()) {
@@ -89,7 +89,7 @@ int main(){
           cout << "888. Back" << endl;
           cin >> hoursormenu;
           if(hoursormenu== 1){
-              cout << "Current Menu:";    
+              cout << "Current Menu:"<<endl;    
             vector<Ingredient*> ingredients;
             Ingredient* rice = new Ingredient("Rice", 200, 5);
             Ingredient* chicken = new Ingredient("Chicken", 100, 50);
@@ -101,6 +101,10 @@ int main(){
           for (Ingredient* ingredient : ingredients) {
           delete ingredient;
           }
+if (choice >= 1 && choice <= chosenVector->size()) {
+Restaurant selectedRestaurant = (*chosenVector)[choice - 1];
+cout << "You picked: " << selectedRestaurant.getName() << " (" << selectedRestaurant.getLocation() << ")" << endl;
+int hoursormenu=0;}
           }
           else if(hoursormenu== 2){ //viewhours
             RestaurantHours nighttimehours;
@@ -114,6 +118,10 @@ int main(){
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             //return as there's nothing to go from here
+if (choice >= 1 && choice <= chosenVector->size()) {
+Restaurant selectedRestaurant = (*chosenVector)[choice - 1];
+cout << "You picked: " << selectedRestaurant.getName() << " (" << selectedRestaurant.getLocation() << ")" << endl;
+int hoursormenu=0;}
           }
           else if(hoursormenu== 888){
             if (eatlocation == 1) {
