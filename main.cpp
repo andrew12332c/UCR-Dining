@@ -4,14 +4,14 @@
 #include "Restaurant.cpp"
 //#include "Restaurant.h"
 #include "RestaurantHours.cpp"
-#include "DiningHallDish.cpp"
+#include "DiningHallDish.h"
 //#include "RestaurantDish.cpp"
 
 #include <iostream> 
 #include <vector>
 #include <string>
 #include <limits>
-//g++ -o tester main.cpp
+//g++ -o tester main.cpp Ingredient.cpp DiningHallDish.cpp
 using namespace std;
 
 void displayOptions( vector<Restaurant>& restaurants) {
@@ -41,19 +41,19 @@ int main(){
     Restaurant pandaexpress;
       pandaexpress.setName("Panda Express's");
       pandaexpress.setLocation("900 University Ave");  
+      campsrestaurants.push_back(pandaexpress);
   vector<Restaurant> dininghalls;
     Restaurant Glasglow;
       Glasglow.setName("Glasglow");
       Glasglow.setLocation("680 W Linden St");  
       dininghalls.push_back(Glasglow);
-      vector<Restaurant>* ptrToVector = nullptr;
         vector<Restaurant>* chosenVector = nullptr;
         // Choose the vector based on user input
   while (true) {
   cout << "Select an option:" << endl;
   cout << "1. Restaurants" << endl;
   cout << "2. Dining Halls" << endl;
-  cout << "888. Exit" << endl;
+  cout << "888. Exit Program" << endl;
   cin>>eatlocation;
     if (eatlocation == 1) {
         displayOptions(campsrestaurants);
@@ -76,7 +76,7 @@ int main(){
       cin >> choice;
 
       if (choice == 888) {
-          continue; // Go back to the main menu
+          break; // Go back to the main menu
       }
       else if (choice >= 1 && choice <= chosenVector->size()) {
         Restaurant selectedRestaurant = (*chosenVector)[choice - 1];
@@ -86,9 +86,10 @@ int main(){
           cout << "Select an option:" << endl;
           cout << "1. View Menu" << endl;
           cout << "2. View Hours" << endl;
+          cout << "888. Back" << endl;
           cin >> hoursormenu;
           if(hoursormenu== 1){
-              cout << "discplay menu:";    
+              cout << "Current Menu:";    
             vector<Ingredient*> ingredients;
             Ingredient* rice = new Ingredient("Rice", 200, 5);
             Ingredient* chicken = new Ingredient("Chicken", 100, 50);
@@ -113,6 +114,15 @@ int main(){
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             //return as there's nothing to go from here
+          }
+          else if(hoursormenu== 888){
+            if (eatlocation == 1) {
+         displayOptions(campsrestaurants);
+        chosenVector = &campsrestaurants;
+          } else if (eatlocation == 2) {
+        displayOptions(dininghalls);
+        chosenVector = &dininghalls;}
+            break;
           }
           else{
             cout << hoursormenu<< "is not a valid input. Please only put a number (1,2)"<<endl;
