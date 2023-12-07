@@ -2,6 +2,7 @@
 
 CampusRestaurant BuildCampusRestaurants::buildHabit() {
     vector<RestaurantDish> habitMenu;
+
     //Burgers
     habitMenu.push_back(RestaurantDish("Charburger", 500, 21, 5.39));
     habitMenu.push_back(RestaurantDish("Double Char", 730, 37, 6.99));
@@ -35,6 +36,34 @@ CampusRestaurant BuildCampusRestaurants::buildHabit() {
     habitMenu.push_back(RestaurantDish("Side Caesar Salad", 280, 6, 3.99));
     habitMenu.push_back(RestaurantDish("Side Salad", 50, 2, 3.99));
 
-    CampusRestaurant Habit("Habit", "900 University Avenue Riverside, CA 92521", habitMenu);
+    CampusRestaurant Habit("Habit", "900 University Ave, Riverside, CA 92521", habitMenu);
     return Habit;
+}
+
+CampusRestaurant BuildCampusRestaurants::buildPandaExpress() {
+    vector<RestaurantDish> pandaMenu;
+    //Sides
+    pandaMenu.push_back(RestaurantDish("Chow Mein", 510, 13, 3.2));
+    pandaMenu.push_back(RestaurantDish("Fried Rice", 520, 11, 3.2));
+    pandaMenu.push_back(RestaurantDish("White Steamed Rice", 380, 7, 3.2));
+    pandaMenu.push_back(RestaurantDish("Super Greens", 90, 6, 3.2));
+    pandaMenu.push_back(RestaurantDish("Chow Fun", 410, 9, 3.2));
+
+    //Chicken
+    pandaMenu.push_back(RestaurantDish("Black Pepper Chicken", 280, 13, 7.5));
+    pandaMenu.push_back(RestaurantDish("Kung Pao Chicken", 290, 16, 7.5));
+    pandaMenu.push_back(RestaurantDish("Grilled Teriyaki Chicken", 275, 33, 7.5));
+    pandaMenu.push_back(RestaurantDish("Mushroom Chicken", 220, 13, 7.5));
+    pandaMenu.push_back(RestaurantDish("Orange Chicken", 490, 25, 7.5));
+
+    //Beef
+    pandaMenu.push_back(RestaurantDish("Beijing Beef", 480, 14, 7.5));
+    pandaMenu.push_back(RestaurantDish("Black Pepper Angus Steak", 210, 19, 10.0));
+    pandaMenu.push_back(RestaurantDish("Broccoli Beef", 150, 9, 7.5));
+
+    //Seafood
+    pandaMenu.push_back(RestaurantDish("Honey Walnut Shrimp", 360, 11, 10.0));
+
+    CampusRestaurant PandaExpress("Panda Express", "900 University Ave, Riverside, CA 92521", pandaMenu);
+    return PandaExpress;
 }
