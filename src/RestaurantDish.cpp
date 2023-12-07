@@ -1,6 +1,6 @@
 #include "../include/RestaurantDish.h"
 
-RestaurantDish::RestaurantDish(string n, int c, int pro, int pri) {
+RestaurantDish::RestaurantDish(string n, int c, int pro, float pri) {
     setName(n);
     calories = c;
     protein = pro;
@@ -15,6 +15,6 @@ void RestaurantDish::setProtein() {
     return;
 }
 
-int RestaurantDish::getPrice() {
+float RestaurantDish::getPrice() {
     return price;
 }

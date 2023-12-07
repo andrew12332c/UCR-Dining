@@ -1,12 +1,12 @@
 #include "gtest/gtest.h"
-#include "../src/DiningHallDish.cpp"
+#include "../include/DiningHallDish.h"
 
 using namespace std;
 
 TEST(DiningHallDishTests, testName) {
-    vector<Ingredient*> ingredients;
-    Ingredient *rice = new Ingredient("Rice", 200, 5);
-    Ingredient *chicken = new Ingredient("Chicken", 100, 50);
+    vector<Ingredient> ingredients;
+    Ingredient rice("Rice", 200, 5);
+    Ingredient chicken("Chicken", 100, 50);
 
     ingredients.push_back(rice);
     ingredients.push_back(chicken);
@@ -16,9 +16,9 @@ TEST(DiningHallDishTests, testName) {
 }
 
 TEST(DiningHallDishTests, testCaloriesPos) {
-    vector<Ingredient*> ingredients;
-    Ingredient *rice = new Ingredient("Rice", 200, 5);
-    Ingredient *chicken = new Ingredient("Chicken", 100, 50);
+    vector<Ingredient> ingredients;
+    Ingredient rice("Rice", 200, 5);
+    Ingredient chicken("Chicken", 100, 50);
 
     ingredients.push_back(rice);
     ingredients.push_back(chicken);
@@ -28,9 +28,9 @@ TEST(DiningHallDishTests, testCaloriesPos) {
 }
 
 TEST(DiningHallDishTests, testCaloriesZero) {
-    vector<Ingredient*> ingredients;
-    Ingredient *water = new Ingredient("Water", 0, 0);
-    Ingredient *ice = new Ingredient("Ice", 0, 0);
+    vector<Ingredient> ingredients;
+    Ingredient water("Water", 0, 0);
+    Ingredient ice("Ice", 0, 0);
 
     ingredients.push_back(water);
     ingredients.push_back(ice);
@@ -40,9 +40,9 @@ TEST(DiningHallDishTests, testCaloriesZero) {
 }
 
 TEST(DiningHallDishTests, testProteinPos) {
-    vector<Ingredient*> ingredients;
-    Ingredient *rice = new Ingredient("Rice", 200, 5);
-    Ingredient *chicken = new Ingredient("Chicken", 100, 50);
+    vector<Ingredient> ingredients;
+    Ingredient rice("Rice", 200, 5);
+    Ingredient chicken("Chicken", 100, 50);
 
     ingredients.push_back(rice);
     ingredients.push_back(chicken);
@@ -52,9 +52,9 @@ TEST(DiningHallDishTests, testProteinPos) {
 }
 
 TEST(DiningHallDishTests, testProteinZero) {
-    vector<Ingredient*> ingredients;
-    Ingredient *water = new Ingredient("Water", 0, 0);
-    Ingredient *ice = new Ingredient("Ice", 0, 0);
+    vector<Ingredient> ingredients;
+    Ingredient water("Water", 0, 0);
+    Ingredient ice("Ice", 0, 0);
 
     ingredients.push_back(water);
     ingredients.push_back(ice);
@@ -64,9 +64,9 @@ TEST(DiningHallDishTests, testProteinZero) {
 }
 
 TEST(DiningHallDishTests, testServingAmount) {
-    vector<Ingredient*> ingredients;
-    Ingredient *water = new Ingredient("Water", 0, 0);
-    Ingredient *ice = new Ingredient("Ice", 0, 0);
+    vector<Ingredient> ingredients;
+    Ingredient water("Water", 0, 0);
+    Ingredient ice("Ice", 0, 0);
 
     ingredients.push_back(water);
     ingredients.push_back(ice);
