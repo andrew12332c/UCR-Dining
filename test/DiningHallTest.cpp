@@ -1,8 +1,5 @@
 #include "gtest/gtest.h"
-#include "../src/DiningHall.cpp"
-#include "../src/DiningHallDish.cpp"
-#include "../src/Dish.cpp"
-#include "../src/Ingredient.cpp"
+#include "../include/DiningHall.h"
 
 using namespace std;
 

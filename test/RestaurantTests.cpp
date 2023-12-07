@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "../src/Restaurant.cpp"
+#include "../include/Restaurant.h"
 
 using namespace std;
 

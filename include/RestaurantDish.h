@@ -5,17 +5,17 @@
 
 class RestaurantDish : public Dish {
   public:
-    RestaurantDish(string n, int c, int pro, int pri);
+    RestaurantDish(string n, int c, int pro, float pri);
 
     //Setters
     void setCalories();
     void setProtein();
 
     //Getters
-    int getPrice();
+    float getPrice();
 
   private:
-    int price;
+    float price;
 };
 
 #endif
