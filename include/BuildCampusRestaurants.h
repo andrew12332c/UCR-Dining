@@ -4,4 +4,5 @@ class BuildCampusRestaurants : public CampusRestaurant {
   public:
     static CampusRestaurant buildHabit();
     static CampusRestaurant buildPandaExpress();
+    static CampusRestaurant buildBarn();
 };

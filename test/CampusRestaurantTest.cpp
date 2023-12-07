@@ -23,3 +23,8 @@ TEST(CampusRestaurant, testBuildPandaExpress) {
     CampusRestaurant PandaExpress = BuildCampusRestaurants::buildPandaExpress();
     EXPECT_EQ(PandaExpress.getMenu(), "Chow Mein\nFried Rice\nWhite Steamed Rice\nSuper Greens\nChow Fun\nBlack Pepper Chicken\nKung Pao Chicken\nGrilled Teriyaki Chicken\nMushroom Chicken\nOrange Chicken\nBeijing Beef\nBlack Pepper Angus Steak\nBroccoli Beef\nHoney Walnut Shrimp\n");
 }
+
+TEST(CampusRestaurantTest, testBuildBarn) {
+    CampusRestaurant Barn = BuildCampusRestaurants::buildBarn();
+    EXPECT_EQ(Barn.getMenu(), "The Barn Classic Burger\nBBQ Lasso Burger\nOriginal Chicken Sandwich\nWestern Chicken Stack\nThe Vegan Burger\nVFC Vegan Chicken Bites\nVFC Vegan Fried Chicken Sandwich\nBarn Fries\nOnion Rings\n");
+}

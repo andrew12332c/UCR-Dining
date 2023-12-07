@@ -67,3 +67,24 @@ CampusRestaurant BuildCampusRestaurants::buildPandaExpress() {
     CampusRestaurant PandaExpress("Panda Express", "900 University Ave, Riverside, CA 92521", pandaMenu);
     return PandaExpress;
 }
+
+CampusRestaurant BuildCampusRestaurants::buildBarn() {
+    vector<RestaurantDish> barnMenu;
+    //Burgers
+    barnMenu.push_back(RestaurantDish("The Barn Classic Burger", 600, 20, 8.99));
+    barnMenu.push_back(RestaurantDish("BBQ Lasso Burger", 730, 27, 9.99));
+    barnMenu.push_back(RestaurantDish("Original Chicken Sandwich", 650, 35, 9.49));
+    barnMenu.push_back(RestaurantDish("Western Chicken Stack", 800, 37, 10.59));
+    
+    //Vegan
+    barnMenu.push_back(RestaurantDish("The Vegan Burger", 400, 12, 7.99));
+    barnMenu.push_back(RestaurantDish("VFC Vegan Chicken Bites", 300, 15, 8.49));
+    barnMenu.push_back(RestaurantDish("VFC Vegan Fried Chicken Sandwich", 550, 20, 10.59));
+
+    //Sides
+    barnMenu.push_back(RestaurantDish("Barn Fries", 300, 6, 2.99));
+    barnMenu.push_back(RestaurantDish("Onion Rings", 370, 9, 4.99));
+
+    CampusRestaurant Barn("Barn", "HMNSS 1500, W Campus Dr, Riverside, CA 92507", barnMenu);
+    return Barn;
+}
