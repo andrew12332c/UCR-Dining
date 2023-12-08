@@ -12,7 +12,12 @@ class DiningHall{
     string getMenu();
     void buildLothian();
     void buildGlasgow();
-    
+    string getName() const {
+        return "Glasgow Dining Hall"; // Or whatever the name should be
+    };
+    string getLocation() const {
+        return "Glasgow location"; // Or whatever the name should be
+    }
   protected:
     vector<DiningHallDish> menu;
 };
