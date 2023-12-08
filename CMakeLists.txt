@@ -24,4 +24,19 @@ add_executable(runAllTests
   test/SortingTest.cpp
 )
 
+add_executable(output
+  src/Ingredient.cpp
+  src/Dish.cpp
+  src/DiningHallDish.cpp
+  src/Sorting.cpp
+  src/CampusRestaurant.cpp
+  src/BuildCampusRestaurants.cpp
+  src/BuildDiningHalls.cpp
+  src/DiningHall.cpp
+  src/Restaurant.cpp
+  src/RestaurantDish.cpp
+  src/RestaurantHours.cpp
+  main.cpp
+)
+
 target_link_libraries(runAllTests gtest gtest_main)

@@ -10,11 +10,7 @@
 // - Add dropdown menu to select restaurant
 
 // TODO: Restaurant/dining hall details page
-// - Add navigation to hours page
-// - Add navigation to menu page  
-
-// TODO: Hours page
-// - Display opening hours table
+// - 
 
 // TODO: Menu page
 // - Add dropdown menu for menu items
@@ -33,3 +29,4 @@
 // - Display allergies for selected dish
 
 // - Display button to go back on ALL PAGES
+

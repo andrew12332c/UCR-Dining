@@ -1,151 +1,261 @@
+#include "include/BuildCampusRestaurants.h"
+#include "include/BuildDiningHalls.h"
+#include "include/Sorting.h"
+#include "include/Display.h"
 
-#include "src/DiningHallDish.cpp"
-#include "src/Ingredient.cpp"
-#include "src/layout.cpp"
-#include "src/RestaurantDish.cpp"
-#include "src/RestaurantHours.cpp"
-#include "src/Sorting.cpp"
-#include <iostream> 
-#include <vector>
-#include <string>
-#include <limits>
-//g++ -o tester main.cpp Ingredient.cpp DiningHallDish.cpp
 using namespace std;
 
-void displayOptions( vector<Restaurant>& restaurants) {
-    cout << "Available Options: " << endl;
-    for (int i = 0; i < restaurants.size(); ++i) {
-        cout << i + 1 << ". " << restaurants[i].getName() << " (" << restaurants[i].getLocation() << ")" << endl;
-    }
-    cout << "888. Back" << endl;
-}
-void displayMenu( DiningHallDish& dish) {
-    cout << "Menu for " << dish.getName() << ":" << endl;
-    cout << "Serving Amount: " << dish.getServingAmount() << " grams" << endl;
-    cout << "Calories: " << dish.getCalories() << " kcal" << endl;
-    cout << "Protein: " << dish.getProtein() << " grams" << endl;
+int main() {
+  char userInput;
+  int sortIndex;
 
-    cout << "Ingredients:" << endl;
-    //  vector<Ingredient*>& ingredients = dish;
-    // // Display each ingredient using index-based loop
-    // for (int i = 0; i < ingredients.size(); ++i) {
-    //     cout << "- " << ingredients[i]->getName() << ": " << ingredients[i]->getCalories() << " calories" << endl;
-    // }
-}
-int main(){
- 
-  int eatlocation;
-  vector<Restaurant> campsrestaurants;
-    Restaurant pandaexpress;
-      pandaexpress.setName("Panda Express's");
-      pandaexpress.setLocation("900 University Ave");  
-      campsrestaurants.push_back(pandaexpress);
-  vector<Restaurant> dininghalls;
-    Restaurant Glasglow;
-      Glasglow.setName("Glasglow");
-      Glasglow.setLocation("680 W Linden St");  
-      dininghalls.push_back(Glasglow);
-        vector<Restaurant>* chosenVector = nullptr;
-        // Choose the vector based on user input
-  while (true) {
-  cout << "Select an option:" << endl;
-  cout << "1. Restaurants" << endl;
-  cout << "2. Dining Halls" << endl;
-  cout << "888. Exit Program" << endl;
-  cin>>eatlocation;
-    if (eatlocation == 1) {
-        displayOptions(campsrestaurants);
-        chosenVector = &campsrestaurants;
-    } else if (eatlocation == 2) {
-        displayOptions(dininghalls);
-        chosenVector = &dininghalls;
-    } else if (eatlocation == 888) {
-        cout << "Exiting program." << endl;
-        break;
-    } else {
-        cout << "Invalid input. Please enter 1, 2, or 888." << endl;
-        cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        continue;
-    }
-    int choice;
-    while(true){
-      cout << "Please pick your restaurant: " << endl;
-      cin >> choice;
+  //Creating restaurant objects
+  DiningHall lothian = BuildDiningHalls::buildLothian();
+  DiningHall glasgow = BuildDiningHalls::buildGlasgow();
+  vector<DiningHall> diningHalls{lothian, glasgow};
 
-      if (choice == 888) {o
-          break; // Go back to the main menu
+  CampusRestaurant habit = BuildCampusRestaurants::buildHabit();
+  CampusRestaurant pandaExpress = BuildCampusRestaurants::buildPandaExpress();
+  CampusRestaurant barn = BuildCampusRestaurants::buildBarn();
+  vector<CampusRestaurant> restaurants{habit, pandaExpress, barn};
+
+  menu:
+    displayMainMenu();
+    while (cin >> userInput) {
+      if (userInput == '1') {
+        goto diningHalls;
       }
-      else if (choice >= 1 && choice <= chosenVector->size()) {
-        Restaurant selectedRestaurant = (*chosenVector)[choice - 1];
-        cout << "You picked: " << selectedRestaurant.getName() << " (" << selectedRestaurant.getLocation() << ")" << endl;
-        int hoursormenu=0;
-        while(true){
-          cout << "Select an option:" << endl;
-          cout << "1. View Menu" << endl;
-          cout << "2. View Hours" << endl;
-          cout << "888. Back" << endl;
-          cin >> hoursormenu;
-          if(hoursormenu== 1){
-              cout << "Current Menu:"<<endl;    
-            vector<Ingredient*> ingredients;
-            Ingredient* rice = new Ingredient("Rice", 200, 5);
-            Ingredient* chicken = new Ingredient("Chicken", 100, 50);
-            ingredients.push_back(rice);
-            ingredients.push_back(chicken);
-            DiningHallDish chickenAndRice("Chicken and Rice", ingredients, 100);
-          displayMenu(chickenAndRice);
-          //   free the memory for ingredients
-          for (Ingredient* ingredient : ingredients) {
-          delete ingredient;
-          }
-if (choice >= 1 && choice <= chosenVector->size()) {
-Restaurant selectedRestaurant = (*chosenVector)[choice - 1];
-cout << "You picked: " << selectedRestaurant.getName() << " (" << selectedRestaurant.getLocation() << ")" << endl;
-int hoursormenu=0;}
-          }
-          else if(hoursormenu== 2){ //viewhours
-            RestaurantHours nighttimehours;
-            nighttimehours.setOpenHours("10 AM–6 PM");
-            nighttimehours.setPeakHours("10AM - 3PM");
-            nighttimehours.setOffHours("6pm - 10am");
-            cout << "Hours of Operation:" << endl;
-            cout << "Open Hours: " << nighttimehours.getOpenHours() << endl;
-            cout << "Peak Hours: " << nighttimehours.getPeakHours() << endl;
-            cout << "Off Hours: " << nighttimehours.getOffHours() << endl;
-            cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            //return as there's nothing to go from here
-if (choice >= 1 && choice <= chosenVector->size()) {
-Restaurant selectedRestaurant = (*chosenVector)[choice - 1];
-cout << "You picked: " << selectedRestaurant.getName() << " (" << selectedRestaurant.getLocation() << ")" << endl;
-int hoursormenu=0;}
-          }
-          else if(hoursormenu== 888){
-            if (eatlocation == 1) {
-         displayOptions(campsrestaurants);
-        chosenVector = &campsrestaurants;
-          } else if (eatlocation == 2) {
-        displayOptions(dininghalls);
-        chosenVector = &dininghalls;}
-            break;
-          }
-          else{
-            cout << hoursormenu<< "is not a valid input. Please only put a number (1,2)"<<endl;
-            cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-          }
-        }
-      } else {//for restaurant choice bigger than vector size
-          cout << "Invalid choice. Please pick a valid option." << endl;
-          cin.clear();
-          cin.ignore(numeric_limits<streamsize>::max(), '\n');
-      } 
-
+      else if (userInput == '2') {
+        goto campusRestaurants;
+      }
+      else if (userInput == 'q') {
+        return 0;
+      }
+      else {
+        cout << "Invalid input, enter again:" << endl;
+        displayMainMenu();
+      }
     }
-  }
 
-return 0;
+  diningHalls:
+    displayDiningHalls();
+    while (cin >> userInput) {
+      if (userInput == '1') {
+        displaySelectedDiningHall(lothian);
+
+        cin >> userInput;
+        if (userInput == '1') {
+          displayDiningHallMenu(lothian);
+          sortIndex = 0;
+          goto sortingDiningHall;
+        }
+        else if (userInput == 'b') {
+          goto diningHalls;
+        }
+        else if (userInput == 'm') {
+          goto menu;
+        }
+        else if (userInput == 'q') {
+          return 0;
+        }
+      }
+      else if (userInput == '2') {
+        displaySelectedDiningHall(glasgow);
+        
+        cin >> userInput;
+        if (userInput == '1') {
+          displayDiningHallMenu(glasgow);
+          sortIndex = 1;
+          goto sortingDiningHall;
+        }
+        else if (userInput == 'b') {
+          goto diningHalls;
+        }
+        else if (userInput == '0') {
+          goto menu;
+        }
+        else if (userInput == 'q') {
+          return 0;
+        }
+      }
+      else if (userInput == 'b') {
+        goto menu;
+      }
+      else if (userInput == 'm') {
+        goto menu;
+      }
+      else if (userInput == 'q') {
+        return 0;
+      }
+      else {
+        cout << "Invalid input, enter again:" << endl;
+        displayDiningHalls();
+      }
+    }
+
+  campusRestaurants:
+    displayCampusRestaurants(restaurants);
+    while (cin >> userInput) {
+      if (userInput == '1') {
+        displaySelectedRestaurant(restaurants.at(0));
+        cin >> userInput;
+        if (userInput == '1') {
+          displayRestaurantMenu(restaurants.at(0));
+          sortIndex = int(userInput - 49);
+          goto sortingRestaurant;
+        }
+        else if (userInput == 'b') {
+          goto campusRestaurants;
+        }
+        else if (userInput == 'm') {
+          goto menu;
+        }
+        else if (userInput == 'q') {
+          return 0;
+        }
+      }
+      else if (userInput == '2') {
+        displaySelectedRestaurant(restaurants.at(1));
+        cin >> userInput;
+        if (userInput == '1') {
+          displayRestaurantMenu(restaurants.at(1));
+          sortIndex = int(userInput - 49);
+          goto sortingRestaurant;
+        }
+        else if (userInput == 'b') {
+          goto campusRestaurants;
+        }
+        else if (userInput == 'm') {
+          goto menu;
+        }
+        else if (userInput == 'q') {
+          return 0;
+        }
+      }
+      else if (userInput == '3') {
+        displaySelectedRestaurant(restaurants.at(2));
+        cin >> userInput;
+        if (userInput == '1') {
+          displayRestaurantMenu(restaurants.at(2));
+          sortIndex = int(userInput - 49);
+          goto sortingRestaurant;
+        }
+        else if (userInput == 'b') {
+          goto campusRestaurants;
+        }
+        else if (userInput == 'm') {
+          goto menu;
+        }
+        else if (userInput == 'q') {
+          return 0;
+        }
+      }
+      else if (userInput == 'b') {
+        goto menu;
+      }
+      else if (userInput == 'm') {
+        goto menu;
+      }
+      else if (userInput == 'q') {
+        return 0;
+      }
+      else {
+        cout << "Invalid input, enter again:" << endl;
+        displayDiningHalls();
+      }
+    }
+
+  sortingDiningHall:
+    while (cin >> userInput) {
+      if (userInput == '1') {
+        diningHalls.at(sortIndex).setMenu(Sorting::sortCaloriesHiLoDiningHallDish(diningHalls.at(sortIndex).getMenu()));
+        displayDiningHallMenu(diningHalls.at(sortIndex));
+      }
+      else if (userInput == '2') {
+        diningHalls.at(sortIndex).setMenu(Sorting::sortCaloriesLoHiDiningHallDish(diningHalls.at(sortIndex).getMenu()));
+        displayDiningHallMenu(diningHalls.at(sortIndex));
+      }
+      else if (userInput == '3') {
+        diningHalls.at(sortIndex).setMenu(Sorting::sortProteinHiLoDiningHallDish(diningHalls.at(sortIndex).getMenu()));
+        displayDiningHallMenu(diningHalls.at(sortIndex));
+      }
+      else if (userInput == '4') {
+        diningHalls.at(sortIndex).setMenu(Sorting::sortProteinLoHiDiningHallDish(diningHalls.at(sortIndex).getMenu()));
+        displayDiningHallMenu(diningHalls.at(sortIndex));
+      }
+      else if (userInput == '5') {
+        diningHalls.at(sortIndex).setMenu(Sorting::sortAToZDiningHallDish(diningHalls.at(sortIndex).getMenu()));
+        displayDiningHallMenu(diningHalls.at(sortIndex));
+      }
+      else if (userInput == '6') {
+        diningHalls.at(sortIndex).setMenu(Sorting::sortZToADiningHallDish(diningHalls.at(sortIndex).getMenu()));
+        displayDiningHallMenu(diningHalls.at(sortIndex));
+      }
+      else if (userInput == 'b') {
+        goto diningHalls;
+      }
+      else if (userInput == 'm') {
+        goto menu;
+      }
+      else if (userInput == 'q') {
+        return 0;
+      }
+      else {
+        cout << "Invalid input, enter again:" << endl;
+        displayDiningHallMenu(diningHalls.at(sortIndex));
+      }
+    }
+
+  sortingRestaurant:
+    while (cin >> userInput) {
+      if (userInput == '1') {
+        restaurants.at(sortIndex).setMenu(Sorting::sortCaloriesHiLoRestaurantDish(restaurants.at(sortIndex).getMenu()));
+        displayRestaurantMenu(restaurants.at(sortIndex));
+      }
+      else if (userInput == '2') {
+        restaurants.at(sortIndex).setMenu(Sorting::sortCaloriesLoHiRestaurantDish(restaurants.at(sortIndex).getMenu()));
+        displayRestaurantMenu(restaurants.at(sortIndex));
+      }
+      else if (userInput == '3') {
+        restaurants.at(sortIndex).setMenu(Sorting::sortProteinHiLoRestaurantDish(restaurants.at(sortIndex).getMenu()));
+        displayRestaurantMenu(restaurants.at(sortIndex));
+      }
+      else if (userInput == '4') {
+        restaurants.at(sortIndex).setMenu(Sorting::sortProteinLoHiRestaurantDish(restaurants.at(sortIndex).getMenu()));
+        displayRestaurantMenu(restaurants.at(sortIndex));
+      }
+      else if (userInput == '5') {
+        restaurants.at(sortIndex).setMenu(Sorting::sortPriceHiLoRestaurantDish(restaurants.at(sortIndex).getMenu()));
+        displayRestaurantMenu(restaurants.at(sortIndex));
+      }
+      else if (userInput == '6') {
+        restaurants.at(sortIndex).setMenu(Sorting::sortPriceLoHiRestaurantDish(restaurants.at(sortIndex).getMenu()));
+        displayRestaurantMenu(restaurants.at(sortIndex));
+      }
+      else if (userInput == '7') {
+        restaurants.at(sortIndex).setMenu(Sorting::sortAToZRestaurantDish(restaurants.at(sortIndex).getMenu()));
+        displayRestaurantMenu(restaurants.at(sortIndex));
+      }
+      else if (userInput == '8') {
+        restaurants.at(sortIndex).setMenu(Sorting::sortZToARestaurantDish(restaurants.at(sortIndex).getMenu()));
+        displayRestaurantMenu(restaurants.at(sortIndex));
+      }
+      else if (userInput == 'b') {
+        goto campusRestaurants;
+      }
+      else if (userInput == 'm') {
+        goto menu;
+      }
+      else if (userInput == 'q') {
+        return 0;
+      }
+      else {
+        cout << "Invalid input, enter again:" << endl;
+        displayRestaurantMenu(restaurants.at(sortIndex));
+      }
+    }
+    
+  return 0;
 }
 
 
