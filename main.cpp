@@ -1,10 +1,11 @@
-#include "src/DiningHallDish.cpp"
-#include "src/Ingredient.cpp"
-#include "src/layout.cpp"
-#include "src/RestaurantDish.cpp"
-#include "src/RestaurantHours.cpp"
-#include "src/Sorting.cpp"
-#include "BuildCampusRestaurants.cpp"
+#include "include/DiningHallDish.h"
+#include "include/Ingredient.h"
+
+#include "include/RestaurantDish.h"
+#include "include/RestaurantHours.h"
+#include "include/Sorting.h"
+#include "include/BuildCampusRestaurants.h"
+#include "include/DiningHall.h"
 #include <iostream> 
 #include <vector>
 #include <string>
@@ -13,14 +14,14 @@
 using namespace std;
 
 
-template <typename T>
-void displayOptions(vector<T>& restaurants) {
-    cout << "Available Options: " << endl;
-    for (int i = 0; i < restaurants.size(); ++i) {
-        cout << i + 1 << ". " << restaurants[i].getName() << " (" << restaurants[i].getLocation() << ")" << endl;
-    }
-    cout << "888. Back" << endl;
-}
+// template <typename T>
+// void displayOptions(vector<T>& restaurants) {
+//     cout << "Available Options: " << endl;
+//     for (int i = 0; i < restaurants.size(); ++i) {
+//         cout << i + 1 << ". " << restaurants[i].getName() << " (" << restaurants[i].getLocation() << ")" << endl;
+//     }
+//     cout << "888. Back" << endl;
+// }
 void displayMenu( DiningHallDish& dish) {
     cout << "Menu for " << dish.getName() << ":" << endl;
     cout << "Serving Amount: " << dish.getServingAmount() << " grams" << endl;
@@ -33,12 +34,11 @@ int main(){
     int eatlocation;
     vector<CampusRestaurant> campsrestaurants;
     CampusRestaurant Habit = BuildCampusRestaurants::buildHabit();
-    campsrestaurants.push_back(pandaexpress);
-
+    campsrestaurants.push_back(Habit);
     vector<DiningHall> dininghalls;
-    Glasglow.buildGlasgow();
-    dininghalls.push_back(Glasglow);  // Fix here, push into dininghalls, not campsrestaurants
-
+    DiningHall Glasgloww; 
+    Glasgloww.DiningHall::buildGlasgow();
+    dininghalls.push_back(Glasgloww);  // Fix here, push into dininghalls, not campsrestaurants
     // Choose the vector based on user input
     while (true) {
         cout << "Select an option:" << endl;
@@ -46,13 +46,21 @@ int main(){
         cout << "2. Dining Halls" << endl;
         cout << "888. Exit Program" << endl;
         cin >> eatlocation;
-        
         if (eatlocation == 1) {
-            displayOptions(campsrestaurants);
-            chosenVector = &campsrestaurants;
+          //  displayOptions(campsrestaurants);
+        //    chosenVector = &campsrestaurants;
+        // for (const auto& restaurant : campsrestaurants) {
+        //         cout << "Restaurant Name: " << restaurant.getName() << endl;
+        //         cout << "Restaurant Menu:\n" << restaurant.getMenu() << endl;
+        //     }
+             cout << "Restaurant Name: " << Habit.getName() << endl;
         } else if (eatlocation == 2) {
-            displayOptions(dininghalls);
-            chosenVector = &dininghalls;
+         //   displayOptions(dininghalls);
+        //    chosenVector = &dininghalls;
+         for (const auto& diningHall : dininghalls) {
+                cout << "Dining Hall Name: " << endl;//diningHall.getName() << endl;
+                cout << "Dining Hall Menu:\n" ;//<< diningHall.getMenu() << endl;
+          }
         } else if (eatlocation == 888) {
             cout << "Exiting program." << endl;
             break;
