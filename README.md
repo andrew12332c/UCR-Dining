@@ -153,4 +153,5 @@ The project was tested with unit tests. Gtest was used extensively for each impl
 
 ## Valgrind
 Valgrind was used to ensure no memory leaks occur:
-![CS100 Valgrind Memcheck](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/c6763524-2086-4d98-9fdb-f9b784bdbb32)
+![CS100 Valgrind Memcheck](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/db3038a2-3b0d-4e72-9137-f0028ec53cfb)
+
