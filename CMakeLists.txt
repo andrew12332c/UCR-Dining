@@ -9,6 +9,7 @@ add_executable(runAllTests
   src/Sorting.cpp
   src/CampusRestaurant.cpp
   src/BuildCampusRestaurants.cpp
+  src/BuildDiningHalls.cpp
   src/DiningHall.cpp
   src/Restaurant.cpp
   src/RestaurantDish.cpp
@@ -20,6 +21,7 @@ add_executable(runAllTests
   test/RestaurantHoursTests.cpp
   test/CampusRestaurantTest.cpp
   test/DiningHallTest.cpp
+  test/SortingTest.cpp
 )
 
 target_link_libraries(runAllTests gtest gtest_main)

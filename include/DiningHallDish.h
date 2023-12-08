@@ -1,8 +1,8 @@
 #ifndef DINING_HALL_DISH_H
-#define DININNG_HALL_DISH_H
+#define DINING_HALL_DISH_H
 
 #include "../include/Dish.h"
-#include "Ingredient.h"
+#include "../include/Ingredient.h"
 
 class DiningHallDish : public Dish{
   public:

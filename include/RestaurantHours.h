@@ -1,5 +1,5 @@
 #ifndef RESTAURANTHOURS_H
-#define RESTAURANTHOURS
+#define RESTAURANTHOURS_H
 
 #include <string>
 

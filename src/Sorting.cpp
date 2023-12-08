@@ -1,143 +1,199 @@
-#include "Sorting.h"
+#include "../include/Sorting.h"
 
 // RestaurantDish sorting functions
-void Sorting::sortProteinHiLoRestaurantDish(vector<RestaurantDish>& dishes) {
-    for (unsigned int i = 0; i < dishes.size(); ++i) {
-        for (unsigned int j = i + 1; j < dishes.size(); ++j) {
-            if ((dishes.at(i)).getProtein() < (dishes.at(j)).getProtein()) {
-                swap(dishes.at(i), dishes.at(j));
+vector<RestaurantDish> Sorting::sortProteinHiLoRestaurantDish(vector<RestaurantDish>& dishes) {
+    vector<RestaurantDish> sortedMenu = dishes;
+
+    for (unsigned int i = 0; i < sortedMenu.size(); ++i) {
+        for (unsigned int j = i + 1; j < sortedMenu.size(); ++j) {
+            if ((sortedMenu.at(i)).getProtein() < (sortedMenu.at(j)).getProtein()) {
+                swap(sortedMenu.at(i), sortedMenu.at(j));
             }
         }
     }
+
+    return sortedMenu;
 }
 
-void Sorting::sortProteinLoHiRestaurantDish(vector<RestaurantDish>& dishes) {
-    for (unsigned int i = 0; i < dishes.size(); ++i) {
-        for (unsigned int j = i + 1; j < dishes.size(); ++j) {
-            if ((dishes.at(i)).getProtein() > (dishes.at(j)).getProtein()) {
-                swap(dishes.at(i), dishes.at(j));
+vector<RestaurantDish> Sorting::sortProteinLoHiRestaurantDish(vector<RestaurantDish>& dishes) {
+    vector<RestaurantDish> sortedMenu = dishes;
+
+    for (unsigned int i = 0; i < sortedMenu.size(); ++i) {
+        for (unsigned int j = i + 1; j < sortedMenu.size(); ++j) {
+            if ((sortedMenu.at(i)).getProtein() > (sortedMenu.at(j)).getProtein()) {
+                swap(sortedMenu.at(i), sortedMenu.at(j));
             }
         }
     }
+
+    return sortedMenu;
 }
 
-void Sorting::sortCaloriesHiLoRestaurantDish(vector<RestaurantDish>& dishes) {
-    for (unsigned int i = 0; i < dishes.size(); ++i) {
-        for (unsigned int j = i + 1; j < dishes.size(); ++j) {
-            if ((dishes.at(i)).getCalories() < (dishes.at(j)).getCalories()) {
-                swap(dishes.at(i), dishes.at(j));
+vector<RestaurantDish> Sorting::sortCaloriesHiLoRestaurantDish(vector<RestaurantDish>& dishes) {
+    vector<RestaurantDish> sortedMenu = dishes;
+
+    for (unsigned int i = 0; i < sortedMenu.size(); ++i) {
+        for (unsigned int j = i + 1; j < sortedMenu.size(); ++j) {
+            if ((sortedMenu.at(i)).getCalories() < (sortedMenu.at(j)).getCalories()) {
+                swap(sortedMenu.at(i), sortedMenu.at(j));
             }
         }
     }
+
+    return sortedMenu;
 }
 
-void Sorting::sortCaloriesLoHiRestaurantDish(vector<RestaurantDish>& dishes) {
-    for (unsigned int i = 0; i < dishes.size(); ++i) {
-        for (unsigned int j = i + 1; j < dishes.size(); ++j) {
-            if ((dishes.at(i)).getCalories() > (dishes.at(j)).getCalories()) {
-                swap(dishes.at(i), dishes.at(j));
+vector<RestaurantDish> Sorting::sortCaloriesLoHiRestaurantDish(vector<RestaurantDish>& dishes) {
+    vector<RestaurantDish> sortedMenu = dishes;
+
+    for (unsigned int i = 0; i < sortedMenu.size(); ++i) {
+        for (unsigned int j = i + 1; j < sortedMenu.size(); ++j) {
+            if ((sortedMenu.at(i)).getCalories() > (sortedMenu.at(j)).getCalories()) {
+                swap(sortedMenu.at(i), sortedMenu.at(j));
             }
         }
     }
+
+    return sortedMenu;
 }
 
-void Sorting::sortPriceHiLoRestaurantDish(vector<RestaurantDish>& dishes) {
-    for (unsigned int i = 0; i < dishes.size(); ++i) {
-        for (unsigned int j = i + 1; j < dishes.size(); ++j) {
-            if ((dishes.at(i)).getPrice() < (dishes.at(j)).getPrice()) {
-                swap(dishes.at(i), dishes.at(j));
+vector<RestaurantDish> Sorting::sortPriceHiLoRestaurantDish(vector<RestaurantDish>& dishes) {
+    vector<RestaurantDish> sortedMenu = dishes;
+
+    for (unsigned int i = 0; i < sortedMenu.size(); ++i) {
+        for (unsigned int j = i + 1; j < sortedMenu.size(); ++j) {
+            if ((sortedMenu.at(i)).getPrice() < (sortedMenu.at(j)).getPrice()) {
+                swap(sortedMenu.at(i), sortedMenu.at(j));
             }
         }
     }
+
+    return sortedMenu;
 }
 
-void Sorting::sortPriceLoHiRestaurantDish(vector<RestaurantDish>& dishes) {
-    for (unsigned int i = 0; i < dishes.size(); ++i) {
-        for (unsigned int j = i + 1; j < dishes.size(); ++j) {
-            if ((dishes.at(i)).getPrice() > (dishes.at(j)).getPrice()) {
-                swap(dishes.at(i), dishes.at(j));
+vector<RestaurantDish> Sorting::sortPriceLoHiRestaurantDish(vector<RestaurantDish>& dishes) {
+    vector<RestaurantDish> sortedMenu = dishes;
+
+    for (unsigned int i = 0; i < sortedMenu.size(); ++i) {
+        for (unsigned int j = i + 1; j < sortedMenu.size(); ++j) {
+            if ((sortedMenu.at(i)).getPrice() > (sortedMenu.at(j)).getPrice()) {
+                swap(sortedMenu.at(i), sortedMenu.at(j));
             }
         }
     }
+
+    return sortedMenu;
 }
 
-void Sorting::sortAToZRestaurantDish(vector<RestaurantDish>& dishes) {
-    for (unsigned int i = 0; i < dishes.size(); ++i) {
-        for (unsigned int j = i + 1; j < dishes.size(); ++j) {
-            if ((dishes.at(i)).getName() > (dishes.at(j)).getName()) {
-                swap(dishes.at(i), dishes.at(j));
+vector<RestaurantDish> Sorting::sortAToZRestaurantDish(vector<RestaurantDish>& dishes) {
+    vector<RestaurantDish> sortedMenu = dishes;
+
+    for (unsigned int i = 0; i < sortedMenu.size(); ++i) {
+        for (unsigned int j = i + 1; j < sortedMenu.size(); ++j) {
+            if ((sortedMenu.at(i)).getName() > (sortedMenu.at(j)).getName()) {
+                swap(sortedMenu.at(i), sortedMenu.at(j));
             }
         }
     }
+
+    return sortedMenu;
 }
 
-void Sorting::sortZToARestaurantDish(vector<RestaurantDish>& dishes) {
-    for (unsigned int i = 0; i < dishes.size(); ++i) {
-        for (unsigned int j = i + 1; j < dishes.size(); ++j) {
-            if ((dishes.at(i)).getName() < (dishes.at(j)).getName()) {
-                swap(dishes.at(i), dishes.at(j));
+vector<RestaurantDish> Sorting::sortZToARestaurantDish(vector<RestaurantDish>& dishes) {
+    vector<RestaurantDish> sortedMenu = dishes;
+
+    for (unsigned int i = 0; i < sortedMenu.size(); ++i) {
+        for (unsigned int j = i + 1; j < sortedMenu.size(); ++j) {
+            if ((sortedMenu.at(i)).getName() < (sortedMenu.at(j)).getName()) {
+                swap(sortedMenu.at(i), sortedMenu.at(j));
             }
         }
     }
+
+    return sortedMenu;
 }
 
 // DiningHallDish sorting functions
-void Sorting::sortProteinHiLoDiningHallDish(vector<DiningHallDish>& dishes) {
-    for (unsigned int i = 0; i < dishes.size(); ++i) {
-        for (unsigned int j = i + 1; j < dishes.size(); ++j) {
-            if ((dishes.at(i)).getProtein() < (dishes.at(j)).getProtein()) {
-                swap(dishes.at(i), dishes.at(j));
+vector<DiningHallDish> Sorting::sortProteinHiLoDiningHallDish(vector<DiningHallDish>& dishes) {
+    vector<DiningHallDish> sortedMenu = dishes;
+
+    for (unsigned int i = 0; i < sortedMenu.size(); ++i) {
+        for (unsigned int j = i + 1; j < sortedMenu.size(); ++j) {
+            if ((sortedMenu.at(i)).getProtein() < (sortedMenu.at(j)).getProtein()) {
+                swap(sortedMenu.at(i), sortedMenu.at(j));
             }
         }
     }
+
+    return sortedMenu;
 }
 
-void Sorting::sortProteinLoHiDiningHallDish(vector<DiningHallDish>& dishes) {
-    for (unsigned int i = 0; i < dishes.size(); ++i) {
-        for (unsigned int j = i + 1; j < dishes.size(); ++j) {
-            if ((dishes.at(i)).getProtein() > (dishes.at(j)).getProtein()) {
-                swap(dishes.at(i), dishes.at(j));
+vector<DiningHallDish> Sorting::sortProteinLoHiDiningHallDish(vector<DiningHallDish>& dishes) {
+    vector<DiningHallDish> sortedMenu = dishes;
+
+    for (unsigned int i = 0; i < sortedMenu.size(); ++i) {
+        for (unsigned int j = i + 1; j < sortedMenu.size(); ++j) {
+            if ((sortedMenu.at(i)).getProtein() > (sortedMenu.at(j)).getProtein()) {
+                swap(sortedMenu.at(i), sortedMenu.at(j));
             }
         }
     }
+
+    return sortedMenu;
 }
 
-void Sorting::sortCaloriesHiLoDiningHallDish(vector<DiningHallDish>& dishes) {
-    for (unsigned int i = 0; i < dishes.size(); ++i) {
-        for (unsigned int j = i + 1; j < dishes.size(); ++j) {
-            if ((dishes.at(i)).getCalories() < (dishes.at(j)).getCalories()) {
-                swap(dishes.at(i), dishes.at(j));
+vector<DiningHallDish> Sorting::sortCaloriesHiLoDiningHallDish(vector<DiningHallDish>& dishes) {
+    vector<DiningHallDish> sortedMenu = dishes;
+
+    for (unsigned int i = 0; i < sortedMenu.size(); ++i) {
+        for (unsigned int j = i + 1; j < sortedMenu.size(); ++j) {
+            if ((sortedMenu.at(i)).getCalories() < (sortedMenu.at(j)).getCalories()) {
+                swap(sortedMenu.at(i), sortedMenu.at(j));
             }
         }
     }
+
+    return sortedMenu;
 }
 
-void Sorting::sortCaloriesLoHiDiningHallDish(vector<DiningHallDish>& dishes) {
-    for (unsigned int i = 0; i < dishes.size(); ++i) {
-        for (unsigned int j = i + 1; j < dishes.size(); ++j) {
-            if ((dishes.at(i)).getCalories() > (dishes.at(j)).getCalories()) {
-                swap(dishes.at(i), dishes.at(j));
+vector<DiningHallDish> Sorting::sortCaloriesLoHiDiningHallDish(vector<DiningHallDish>& dishes) {
+    vector<DiningHallDish> sortedMenu = dishes;
+
+    for (unsigned int i = 0; i < sortedMenu.size(); ++i) {
+        for (unsigned int j = i + 1; j < sortedMenu.size(); ++j) {
+            if ((sortedMenu.at(i)).getCalories() > (sortedMenu.at(j)).getCalories()) {
+                swap(sortedMenu.at(i), sortedMenu.at(j));
             }
         }
     }
+
+    return sortedMenu;
 }
 
-void Sorting::sortAToZDiningHallDish(vector<DiningHallDish>& dishes) {
-    for (unsigned int i = 0; i < dishes.size(); ++i) {
-        for (unsigned int j = i + 1; j < dishes.size(); ++j) {
-            if ((dishes.at(i)).getName() > (dishes.at(j)).getName()) {
-                swap(dishes.at(i), dishes.at(j));
+vector<DiningHallDish> Sorting::sortAToZDiningHallDish(vector<DiningHallDish>& dishes) {
+    vector<DiningHallDish> sortedMenu = dishes;
+
+    for (unsigned int i = 0; i < sortedMenu.size(); ++i) {
+        for (unsigned int j = i + 1; j < sortedMenu.size(); ++j) {
+            if ((sortedMenu.at(i)).getName() > (sortedMenu.at(j)).getName()) {
+                swap(sortedMenu.at(i), sortedMenu.at(j));
             }
         }
     }
+
+    return sortedMenu;
 }
 
-void Sorting::sortZToADiningHallDish(vector<DiningHallDish>& dishes) {
-    for (unsigned int i = 0; i < dishes.size(); ++i) {
-        for (unsigned int j = i + 1; j < dishes.size(); ++j) {
-            if ((dishes.at(i)).getName() < (dishes.at(j)).getName()) {
-                swap(dishes.at(i), dishes.at(j));
+vector<DiningHallDish> Sorting::sortZToADiningHallDish(vector<DiningHallDish>& dishes) {
+    vector<DiningHallDish> sortedMenu = dishes;
+
+    for (unsigned int i = 0; i < sortedMenu.size(); ++i) {
+        for (unsigned int j = i + 1; j < sortedMenu.size(); ++j) {
+            if ((sortedMenu.at(i)).getName() < (sortedMenu.at(j)).getName()) {
+                swap(sortedMenu.at(i), sortedMenu.at(j));
             }
         }
     }
+
+    return sortedMenu;
 }

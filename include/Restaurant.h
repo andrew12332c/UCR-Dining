@@ -1,5 +1,5 @@
 #ifndef RESTAURANT_H
-#define RESTAURANT
+#define RESTAURANT_H
 
 //uncomment when files are ready
 //include "../DiningHall.cpp"

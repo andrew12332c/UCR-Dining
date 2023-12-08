@@ -3,14 +3,15 @@
 CampusRestaurant::CampusRestaurant(string name, string location, vector<RestaurantDish> restaurantMenu) {
     setName(name);
     setLocation(location);
-
-    for (unsigned i = 0; i < restaurantMenu.size(); ++i) {
-        addMenuItem(restaurantMenu.at(i));
-    }
+    setMenu(restaurantMenu);
 }
 
 void CampusRestaurant::addMenuItem(RestaurantDish dish) {
     menu.push_back(dish);
+}
+
+void CampusRestaurant::setMenu(const vector<RestaurantDish>& newMenu) {
+    menu = newMenu;
 }
 
 void CampusRestaurant::removeMenuItem(const string& dish) {
@@ -21,7 +22,11 @@ void CampusRestaurant::removeMenuItem(const string& dish) {
     }
 }
 
-string CampusRestaurant::getMenu() {
+vector<RestaurantDish>& CampusRestaurant::getMenu() {
+    return menu;
+}
+
+string CampusRestaurant::getMenuList() {
     string menuList = "";
     for(int i = 0; i < menu.size(); ++i){
         menuList = menuList + menu.at(i).getName() + "\n";

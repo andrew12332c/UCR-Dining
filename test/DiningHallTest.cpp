@@ -1,23 +1,16 @@
 #include "gtest/gtest.h"
-#include "../include/DiningHall.h"
+#include "../include/BuildDiningHalls.h"
 
 using namespace std;
 
-TEST(DiningHallTests, testConstructor) {
-    DiningHall glasgow;
-    EXPECT_EQ(glasgow.getMenu(), "");
-}
-
 TEST(DiningHallTests, testBuildGlasgow) {
-    DiningHall glasgow;
-    glasgow.buildGlasgow();
-    EXPECT_EQ(glasgow.getMenu(), "Buffalo Cauliflower Wrap\nHalal Grilled Chicken\nNew England Clam Chowder\nPepperjack Steak Quesadilla\nSteamed Carrots\nShoestring Fries\nEnglish Pub Style Fish\nClassic Pepperoni Pizza\nVegan Grilled Cheese\nRed Quinoa\nCilantro Lime Rice\nSalmon Charmoula\nChicken Tinga\nCorn Tortilla\nSteamed Broccoli\nAssorted Cookies\n");
+    DiningHall glasgow = BuildDiningHalls::buildGlasgow();
+    EXPECT_EQ(glasgow.getMenuList(), "Buffalo Cauliflower Wrap\nHalal Grilled Chicken\nNew England Clam Chowder\nPepperjack Steak Quesadilla\nSteamed Carrots\nShoestring Fries\nEnglish Pub Style Fish\nClassic Pepperoni Pizza\nVegan Grilled Cheese\nRed Quinoa\nCilantro Lime Rice\nSalmon Charmoula\nChicken Tinga\nCorn Tortilla\nSteamed Broccoli\nAssorted Cookies\n");
 }
 
 TEST(DiningHallTests, testBuildLothian) {
-    DiningHall lothian;
-    lothian.buildLothian();
-    EXPECT_EQ(lothian.getMenu(), "Halal Grilled Chicken\nJasmine Rice\nChicken Thai Jungle Curry\nCheese Pizza\nShoestring Fries\nSteamed Carrots\nSteamed Corn\nAdobo Tri Tip\nGrilled Chicken Club Sandwich\nChicken Noodle Soup\nCorn Bread\nTurkey Burger\nKalua Pork\nRaspberry Jello\nAssorted Cookies\n");
+    DiningHall lothian = BuildDiningHalls::buildLothian();
+    EXPECT_EQ(lothian.getMenuList(), "Halal Grilled Chicken\nJasmine Rice\nChicken Thai Jungle Curry\nCheese Pizza\nShoestring Fries\nSteamed Carrots\nSteamed Corn\nAdobo Tri Tip\nGrilled Chicken Club Sandwich\nChicken Noodle Soup\nCorn Bread\nTurkey Burger\nKalua Pork\nRaspberry Jello\nAssorted Cookies\n");
 }
 
 
@@ -32,7 +25,7 @@ TEST(DiningHallTests, testAddingMenuItem) {
     DiningHallDish chickenAndRice("Chicken and Rice", ingredients, 100);
 
     testDiningHall.addMenuItem(chickenAndRice);
-    EXPECT_EQ(testDiningHall.getMenu(), "Chicken and Rice\n");
+    EXPECT_EQ(testDiningHall.getMenuList(), "Chicken and Rice\n");
 
 }
 
@@ -56,7 +49,7 @@ TEST(DiningHallTests, testRemovingMenuItem) {
 
     testDiningHall.removeMenuItem(chickenAndRice);
     
-    EXPECT_EQ(testDiningHall.getMenu(), "Very Basic Tortilla\n");
+    EXPECT_EQ(testDiningHall.getMenuList(), "Very Basic Tortilla\n");
 }
 
 TEST(DiningHallTests, testGetMenu) {
@@ -77,5 +70,5 @@ TEST(DiningHallTests, testGetMenu) {
     DiningHallDish chickenAndRice("Chicken and Rice", ingredients2, 100);
     testDiningHall.addMenuItem(chickenAndRice);
     
-    EXPECT_EQ(testDiningHall.getMenu(), "Very Basic Tortilla\nChicken and Rice\n");
+    EXPECT_EQ(testDiningHall.getMenuList(), "Very Basic Tortilla\nChicken and Rice\n");
 }
