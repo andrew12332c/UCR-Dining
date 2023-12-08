@@ -100,8 +100,36 @@ Some class implementations already satisfied SOLID principles. The Interface Seg
  > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Project board.
  > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
- ## Screenshots
- > Screenshots of the input/output after running your application
+## Screenshots
+![Main Menu](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/aa8a399f-1ee0-4f42-ba2b-0b28a9f7fbdc)
+
+The main menu page after running the executable. Entering '1' will change the window to a list of dining halls, and '2' to a list of on-campus restaurants. At any point in the program, entering 'q' will exit the program.
+
+![Dining Hall List](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/a064aaba-b027-4f75-a754-0ba50aaa8e86)
+
+A list of dining halls. 
+
+![Dining Hall View](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/87e2b1ec-32c7-4374-a5ea-e8ad2d28c146)
+
+The window after selecting a dining hall.
+
+![Dining Hall Menu (Sorted A-Z)](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/34b11388-c0d0-449e-9a33-9eb5fdf23f81)
+
+Selecting "View Menu" will open this menu window, and each sorting option will reorder the menu with the respective sorting function. The menu in this screenshot is sorted alphabetically from A-Z.
+
+![Campus Restaurant List](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/3e9d41d6-06d5-4e8b-9bd4-5623d176e36a)
+
+A list of on-campus restaurants that have been implemented. The list will be extended in a future sprint. 
+
+![Campus Restaurant View](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/6a4854e7-1eb3-436d-8659-cc60eb23abf6)
+
+The window after selecting an on-campus restaurant.
+
+![Campus Restaurant Menu (Sorted by price low to high)](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/e1aa1e94-329d-45f2-8c0a-2999aaaf7462)
+
+Menu for on-campus restaurant sorted by price from low to high.
+
+
  ## Installation/Usage
  > Instructions on installing and running your application
  ## Testing
