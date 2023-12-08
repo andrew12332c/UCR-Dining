@@ -36,6 +36,6 @@ string DiningHall::getMenuList(){
     return menuList;
 }
 
-vector<DiningHallDish> DiningHall::getMenu() {
+vector<DiningHallDish>& DiningHall::getMenu() {
     return menu;
 }

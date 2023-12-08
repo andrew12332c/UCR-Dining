@@ -12,7 +12,7 @@ class DiningHall : public Restaurant{
     void removeMenuItem(DiningHallDish dish);
     void setMenu(const vector<DiningHallDish>& newMenu);
     string getMenuList();
-    vector<DiningHallDish> getMenu();
+    vector<DiningHallDish>& getMenu();
     
   protected:
     vector<DiningHallDish> menu;
