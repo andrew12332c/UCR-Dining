@@ -135,11 +135,12 @@ Menu for on-campus restaurant sorted by price from low to high.
 2. Run the following commands to compile the program:
 
    cmake .
+   
    make
  
-3. There will now be a folder "bin" that contains the executable "output".
-4. Given that your current directory is the same as CMakeLists.txt, run the executable with: ./bin/output.
-5. The program is now running. Navigate through the menus by entering your choice based on what's displayed on the screen.
+4. There will now be a folder "bin" that contains the executable "output".
+5. Given that your current directory is the same as CMakeLists.txt, run the executable with: ./bin/output.
+6. The program is now running. Navigate through the menus by entering your choice based on what's displayed on the screen.
 
 ## Testing
 The project was tested with unit tests. Gtest was used extensively for each implemented method, and code was only merged after all tests passed. Attached below are some screenshots of the tests used:
