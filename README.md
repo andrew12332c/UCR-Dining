@@ -3,15 +3,15 @@ Authors:
 <span>[Aidan Lok Sang Wong](https://github.com/aidanwls), [Andrew Zhang](https://github.com/andrew12332c), [Branton Ta](https://github.com/brandontaa), [Micael Collins](https://github.com/Ding0-Dongo)</span>
 
 ### Project Description
-UCR Dining is the ultimate companion to finding healthy, affordable food on campus. The user-friendly app is designed to help students and faculty discover dining options that fit their budget, nutritional needs, and schedule. As students who have lived in campus residence halls, we believe that finding dining information is far too inconvenient. Dining hall menus are difficult to come by, nutritional information is unavailable, and HUB dining is often too busy and costly. Our app will solve this issue by providing all of this information in one easily accessible location.
-The project will be implemented in C++ and use its standard libraries. We are also considering the OpenCV external library to detect queue lengths at restaurants, providing an estimate for wait times—this will require a lot more testing. Input involves users interacting with the UI, with output being dining information on campus.
+UCR Dining is the ultimate companion to finding healthy, affordable food on campus. The user-friendly app is designed to help students and faculty discover dining options that fit their budget, nutritional needs, and schedule. As students who have lived in campus residence halls, we believe that finding dining information is far too inconvenient. Dining hall menus are difficult to come by, nutritional information is unavailable, and HUB dining is often too busy and costly. Our app will solve this issue by providing all of this information in one easily accessible location. The project will be implemented in C++ and use its standard libraries. Input involves users interacting with the UI, with output being dining information on campus.
 
 Key features:
-* Dining Hall menus and opening hours: Users will be able to view the menus and opening hours for both Lothian and Glasgow dining halls, including holidays and special events.
+* Dining Hall menus and opening hours: Users will be able to view the menus and opening hours for both Lothian and Glasgow dining halls.
 * Campus restaurant menus and opening hours: Users will be able to view the menus and hours of operation for each restaurant on campus, including prices and images if applicable. These menus do not need to be updated like the dining hall ones as most restaurants have standard menus. 
 * Nutritional information: Users will be able to view nutritional information (an estimate for dining hall food) for all available food options on campus.
-* Queue times: Users will be able to view an estimated queue time for each restaurant. (If OpenCV can be implemented, facial detection can be utilized. Otherwise, the data can be collected based on restaurant traffic trends).
-* Sorting: Users will be able to sort all food options by price, nutrition (calories, protein etc.), distance from user, and opening hours.
+* Prices: Users will be able to view prices for on-campus restaurant menus. 
+* ~~Queue times: Users will be able to view an estimated queue time for each restaurant. (If OpenCV can be implemented, facial detection can be utilized. Otherwise, the data can be collected based on restaurant traffic trends).~~ Removed as OpenCV couldn't be accessed on cs100 server.
+* Sorting: Users will be able to sort all food options by price, nutrition (calories, protein etc.), and opening hours.
 * User-friendly UI: Users will be able to easily navigate the application to find the information they need.
 
 ## User Interface Specification
