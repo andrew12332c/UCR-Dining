@@ -101,7 +101,7 @@ int main() {
         cin >> userInput;
         if (userInput == '1') {
           displayRestaurantMenu(restaurants.at(0));
-          sortIndex = int(userInput - 49);
+          sortIndex = 0;
           goto sortingRestaurant;
         }
         else if (userInput == 'b') {
@@ -119,7 +119,7 @@ int main() {
         cin >> userInput;
         if (userInput == '1') {
           displayRestaurantMenu(restaurants.at(1));
-          sortIndex = int(userInput - 49);
+          sortIndex = 1;
           goto sortingRestaurant;
         }
         else if (userInput == 'b') {
@@ -137,7 +137,7 @@ int main() {
         cin >> userInput;
         if (userInput == '1') {
           displayRestaurantMenu(restaurants.at(2));
-          sortIndex = int(userInput - 49);
+          sortIndex = 2;
           goto sortingRestaurant;
         }
         else if (userInput == 'b') {
