@@ -4,7 +4,7 @@
 //uncomment when files are ready
 //include "../DiningHall.cpp"
 //include "../CampusRestaurant.cpp"
-#include "RestaurantHours.h"
+//#include "RestaurantHours.h"
 
 using namespace std;
 

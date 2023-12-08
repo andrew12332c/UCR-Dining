@@ -23,7 +23,7 @@ void displayOptions( vector<Restaurant>& restaurants) {
 }
 void displayMenu( DiningHallDish& dish) {
     cout << "Menu for " << dish.getName() << ":" << endl;
-    cout << "Serving Amount: " << dish.getServingAmount() << " grams" << endl;
+    //cout << "Serving Amount: " << dish.getServingAmount() << " grams" << endl;
     cout << "Calories: " << dish.getCalories() << " kcal" << endl;
     cout << "Protein: " << dish.getProtein() << " grams" << endl;
 
@@ -75,7 +75,7 @@ int main(){
       cout << "Please pick your restaurant: " << endl;
       cin >> choice;
 
-      if (choice == 888) {o
+      if (choice == 888) {
           break; // Go back to the main menu
       }
       else if (choice >= 1 && choice <= chosenVector->size()) {
