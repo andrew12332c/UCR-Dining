@@ -94,14 +94,8 @@ Several changes were made to the UML diagram:
 * The final change was adding the BuildDiningHalls and BuildCampusRestaurants classes. Their function is to create DiningHall and CampusRestaurant objects, respectively, with information on UCR dining options. This implementation was originally going to be done in main(), but having classes take on this functionality will greatly improve readability and enforces the Interface Segregation Principle. 
 
 Some class implementations already satisfied SOLID principles. The Interface Segregation Principle was met by separating the implementation of dining halls and on-campus restaurants. Using an abstract Dish class allows for the subclasses to inherit elements that overlap, but only the RestarauntDish class implements price, which isn't applicable to the DiningHallDish class. Introducing this layer of abstraction prevents the DiningHallDish class from implementing methods only RestaurantDish will use, and vice versa. This abstraction also meets the Open-Closed Principle, as adding a new restaurant will go through the respective subclass, leaving the Restaurant class unaffected.
- 
- > ## Final deliverable
- > All group members will give a demo to the reader during lab time. ou should schedule your demo on Calendly with the same reader who took your second scrum meeting. The reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
- > Before the demo, you should do the following:
- > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
- > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Project board.
- > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
- 
+
+
 ## Screenshots
 ![Main Menu](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/aa8a399f-1ee0-4f42-ba2b-0b28a9f7fbdc)
 
