@@ -133,10 +133,12 @@ Menu for on-campus restaurant sorted by price from low to high.
 ## Installation/Usage
 1. Download all files in the include/ and src/ folders, main.cpp, and CMakeLists.txt.
 2. Run the following commands to compile the program:
+
    cmake .
    make
+ 
 3. There will now be a folder "bin" that contains the executable "output".
-4. Given that your current directory is the same as CMakeLists.txt, run the executable with ./bin/output.
+4. Given that your current directory is the same as CMakeLists.txt, run the executable with: ./bin/output.
 5. The program is now running. Navigate through the menus by entering your choice based on what's displayed on the screen.
 
 ## Testing
