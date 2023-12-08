@@ -13,7 +13,7 @@ void CampusRestaurant::addMenuItem(RestaurantDish dish) {
     menu.push_back(dish);
 }
 
-void CampusRestaurant::removeMenuItem(string& dish) {
+void CampusRestaurant::removeMenuItem(const string& dish) {
     for (unsigned i = 0; i < menu.size(); ++i) {
         if (menu.at(i).getName() == dish) {
             menu.erase(menu.begin() + i);
@@ -21,4 +21,10 @@ void CampusRestaurant::removeMenuItem(string& dish) {
     }
 }
 
-//string CampusRestaurant::getMenu()
+string CampusRestaurant::getMenu() {
+    string menuList = "";
+    for(int i = 0; i < menu.size(); ++i){
+        menuList = menuList + menu.at(i).getName() + "\n";
+    }
+    return menuList;
+}
