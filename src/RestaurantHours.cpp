@@ -1,5 +1,5 @@
 #include <string>
-#include "RestaurantHours.h"
+#include "../include/RestaurantHours.h"
 
 using namespace std;
 

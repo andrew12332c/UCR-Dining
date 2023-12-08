@@ -1,5 +1,5 @@
 #ifndef DISH_H
-#define DISH
+#define DISH_H
 
 #include <vector>
 #include <string>
@@ -9,16 +9,16 @@ using namespace std;
 class Dish {
   public: 
     //Setters
-    void setName(string s) {name = s;}
+    void setName(string s);
     virtual void setCalories() = 0;
     virtual void setProtein() = 0;
-    void addAllergy(string a) {allergies.push_back(a);}
+    void addAllergy(string a);
 
     //Getters
-    string getName() {return name;}
-    int getCalories() {return calories;}
-    int getProtein() {return protein;}
-    vector<string> getAllergies() {return allergies;}
+    string getName();
+    int getCalories();
+    int getProtein();
+    vector<string> getAllergies();
 
   protected:
     string name;

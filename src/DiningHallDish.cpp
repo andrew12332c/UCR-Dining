@@ -1,6 +1,6 @@
-#include "DiningHallDish.h"
+#include "../include/DiningHallDish.h"
 
-DiningHallDish::DiningHallDish(string n, vector<Ingredient*> ingredients, int amt) {
+DiningHallDish::DiningHallDish(string n, vector<Ingredient> ingredients, int amt) {
     name = n;
     ingredientList = ingredients;
     servingAmountInGrams = amt;
@@ -10,7 +10,7 @@ DiningHallDish::DiningHallDish(string n, vector<Ingredient*> ingredients, int am
     setProtein();
 }
 
-void DiningHallDish::addIngredient(Ingredient* newIngredient) {
+void DiningHallDish::addIngredient(Ingredient newIngredient) {
     ingredientList.push_back(newIngredient);
 }
 
@@ -20,13 +20,13 @@ void DiningHallDish::setServingAmount(int servingAmt) {
 
 void DiningHallDish::setCalories() {
     for (unsigned i = 0; i < ingredientList.size(); ++i) {
-        calories += ingredientList.at(i)->getCalories();
+        calories += ingredientList.at(i).getCalories();
     }
 }
 
 void DiningHallDish::setProtein() {
     for (unsigned i = 0; i < ingredientList.size(); ++i) {
-        protein += ingredientList.at(i)->getProtein();
+        protein += ingredientList.at(i).getProtein();
     }
 }
 

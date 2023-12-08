@@ -1,12 +1,10 @@
 
-#include <iostream>
-//#include "RestaurantDish.cpp"
-#include "Restaurant.cpp"
-//#include "Restaurant.h"
-#include "RestaurantHours.cpp"
-#include "DiningHallDish.h"
-//#include "RestaurantDish.cpp"
-
+#include "src/DiningHallDish.cpp"
+#include "src/Ingredient.cpp"
+#include "src/layout.cpp"
+#include "src/RestaurantDish.cpp"
+#include "src/RestaurantHours.cpp"
+#include "src/Sorting.cpp"
 #include <iostream> 
 #include <vector>
 #include <string>
