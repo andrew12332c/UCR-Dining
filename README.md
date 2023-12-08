@@ -83,7 +83,9 @@ Example of "menu" button.
 Added table for peak and off hours.
 
 ## Updated Class Diagram
-![Updated CS100 UML Diagram](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/cd3f90eb-4ef6-4133-af44-0cc1a63bf04b)
+![CS100 Final UML Diagram](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/444e7a93-cf4b-4889-bb17-30eb4e1859d8)
+Note: The UML Diagram is updated for milestone 4. Minor changes were made to some methods, pointer implementation was removed, and the GUI Window class has been replaced by Display methods for outputting to the terminal. More sorting methods were also added. The previous version of the UML diagram from milestone 3 can be viewed in the commit history.
+
 Several changes were made to the UML diagram:
 
 * The setCalories and setProtein methods were removed from the base Dish class and are instead defined separately in their subclasses. They were originally designed as abstract functions, but the implementation in derived classes DiningHallDish and RestaurantDish required different parameters. Hence, one subclass couldn't use the inherited functions, and the Liskov Substitution Principle was violated. Making this change eliminates redundant code and improves the readability of the affected classes.
