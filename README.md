@@ -130,8 +130,31 @@ The window after selecting an on-campus restaurant.
 Menu for on-campus restaurant sorted by price from low to high.
 
 
- ## Installation/Usage
- > Instructions on installing and running your application
- ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
- 
+## Installation/Usage
+1. Download all files in the include/ and src/ folders, main.cpp, and CMakeLists.txt.
+2. Run the following commands to compile the program:
+   cmake .
+   make
+3. There will now be a folder "bin" that contains the executable "output".
+4. Given that your current directory is the same as CMakeLists.txt, run the executable with ./bin/output.
+5. The program is now running. Navigate through the menus by entering your choice based on what's displayed on the screen.
+
+## Testing
+The project was tested with unit tests. Gtest was used extensively for each implemented method, and code was only merged after all tests passed. Attached below are some screenshots of the tests used:
+
+![DiningHallDish Tests](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/56b3ac0b-ee45-4e8c-b661-2671a3b175dd)
+![RestaurantDish Tests](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/cdfbf9bc-ad08-4fd5-ad7c-ae8e471ed998)
+![Ingredient Tests](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/09cdefcf-6dac-4d86-8098-c4bcdbd629c8)
+![Restaurant Tests](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/02f94a6d-9047-4563-a981-1162a7dd692b)
+![RestaurantHours Tests](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/ae0eb2c1-5865-4edd-8ed6-eda1cdadad8e)
+![CampusRestaurant Tests](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/685491d5-7e71-4d23-90dd-87f94b341478)
+![DiningHall Tests](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/3be8f5da-b973-47d9-9fb2-fdf5530d8040)
+![SortingRestaurantDish Tests](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/33934202-2be3-43e6-ba54-7d86b33d1762)
+![SortingDiningHallDish Tests](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/54982014-736f-4542-b627-84ee3f584785)
+
+
+
+
+
+
+
