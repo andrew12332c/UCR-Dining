@@ -1,17 +1,18 @@
 #include "gtest/gtest.h"
-#include "../include/Sorting.cpp"
+#include "../include/BuildCampusRestaurants.h"
+#include "../include/BuildDiningHalls.h"
+#include "../include/Sorting.h"
 
 using namespace std;
 
-CampusRestaurant Habit = BuildCampusRestaurants::buildHabit();
-
 // RestaurantDish Sorting Tests
 TEST(SortingTestsRestaurantDish, testSortProteinHiLo) {
+    CampusRestaurant Habit = BuildCampusRestaurants::buildHabit();
     bool isSorted = true;
-    Sorting sort = Sorting::sortProteinHiLoRestaurantDish(habitMenu);
+    Habit.setMenu(Sorting::sortProteinHiLoRestaurantDish(Habit.getMenu()));
 
-    for (unsigned int = i; i < sort.habitMenu.size(i) - 1; ++i) {
-        if ((sort.habitMenu.at(i)).getProtein() < (sort.habitMenu.at(i + 1)).getProtein()) {
+    for (unsigned int i = 0; i < Habit.getMenu().size() - 1; ++i) {
+        if ((Habit.getMenu().at(i)).getProtein() < (Habit.getMenu().at(i + 1)).getProtein()) {
             isSorted = false;
         }
     }
@@ -20,11 +21,12 @@ TEST(SortingTestsRestaurantDish, testSortProteinHiLo) {
 }
 
 TEST(SortingTestsRestaurantDish, testSortProteinLoHi) {
+    CampusRestaurant Habit = BuildCampusRestaurants::buildHabit();
     bool isSorted = true;
-    Sorting sort = Sorting::sortProteinLoHiRestaurantDish(habitMenu);
+    Habit.setMenu(Sorting::sortProteinLoHiRestaurantDish(Habit.getMenu()));
 
-    for (unsigned int = i; i < sort.habitMenu.size(i) - 1; ++i) {
-        if ((sort.habitMenu.at(i)).getProtein() > (sort.habitMenu.at(i + 1)).getProtein()) {
+    for (unsigned int i = 0; i < Habit.getMenu().size() - 1; ++i) {
+        if ((Habit.getMenu().at(i)).getProtein() > (Habit.getMenu().at(i + 1)).getProtein()) {
             isSorted = false;
         }
     }
@@ -33,11 +35,12 @@ TEST(SortingTestsRestaurantDish, testSortProteinLoHi) {
 }
 
 TEST(SortingTestsRestaurantDish, testSortCaloriesHiLo) {
+    CampusRestaurant Habit = BuildCampusRestaurants::buildHabit();
     bool isSorted = true;
-    Sorting sort = Sorting::sortCaloriesHiLoRestaurantDish(habitMenu);
+    Habit.setMenu(Sorting::sortCaloriesHiLoRestaurantDish(Habit.getMenu()));
 
-    for (unsigned int = i; i < sort.habitMenu.size(i) - 1; ++i) {
-        if ((sort.habitMenu.at(i)).getCalories() < (sort.habitMenu.at(i + 1)).getCalories()) {
+    for (unsigned int i = 0; i < Habit.getMenu().size() - 1; ++i) {
+        if ((Habit.getMenu().at(i)).getCalories() < (Habit.getMenu().at(i + 1)).getCalories()) {
             isSorted = false;
         }
     }
@@ -46,11 +49,12 @@ TEST(SortingTestsRestaurantDish, testSortCaloriesHiLo) {
 }
 
 TEST(SortingTestsRestaurantDish, testSortCaloriesLoHi) {
+    CampusRestaurant Habit = BuildCampusRestaurants::buildHabit();
     bool isSorted = true;
-    Sorting sort = Sorting::sortCaloriesLoHiRestaurantDish(habitMenu);
+    Habit.setMenu(Sorting::sortCaloriesLoHiRestaurantDish(Habit.getMenu()));
 
-    for (unsigned int = i; i < sort.habitMenu.size(i) - 1; ++i) {
-        if ((sort.habitMenu.at(i)).getCalories() > (sort.habitMenu.at(i + 1)).getCalories()) {
+    for (unsigned int i = 0; i < Habit.getMenu().size() - 1; ++i) {
+        if ((Habit.getMenu().at(i)).getCalories() > (Habit.getMenu().at(i + 1)).getCalories()) {
             isSorted = false;
         }
     }
@@ -59,11 +63,12 @@ TEST(SortingTestsRestaurantDish, testSortCaloriesLoHi) {
 }
 
 TEST(SortingTestsRestaurantDish, testSortPriceHiLo) {
+    CampusRestaurant Habit = BuildCampusRestaurants::buildHabit();
     bool isSorted = true;
-    Sorting sort = Sorting::sortPriceHiLoRestaurantDish(habitMenu);
+    Habit.setMenu(Sorting::sortPriceHiLoRestaurantDish(Habit.getMenu()));
 
-    for (unsigned int = i; i < sort.habitMenu.size(i) - 1; ++i) {
-        if ((sort.habitMenu.at(i)).getPrice() < (sort.habitMenu.at(i + 1)).getPrice()) {
+    for (unsigned int i = 0; i < Habit.getMenu().size() - 1; ++i) {
+        if ((Habit.getMenu().at(i)).getPrice() < (Habit.getMenu().at(i + 1)).getPrice()) {
             isSorted = false;
         }
     }
@@ -72,11 +77,12 @@ TEST(SortingTestsRestaurantDish, testSortPriceHiLo) {
 }
 
 TEST(SortingTestsRestaurantDish, testSortPriceLoHi) {
+    CampusRestaurant Habit = BuildCampusRestaurants::buildHabit();
     bool isSorted = true;
-    Sorting sort = Sorting::sortPriceLoHiRestaurantDish(habitMenu);
+    Habit.setMenu(Sorting::sortPriceLoHiRestaurantDish(Habit.getMenu()));
 
-    for (unsigned int = i; i < sort.habitMenu.size(i) - 1; ++i) {
-        if ((sort.habitMenu.at(i)).getPrice() > (sort.habitMenu.at(i + 1)).getPrice()) {
+    for (unsigned int i = 0; i < Habit.getMenu().size() - 1; ++i) {
+        if ((Habit.getMenu().at(i)).getPrice() > (Habit.getMenu().at(i + 1)).getPrice()) {
             isSorted = false;
         }
     }
@@ -85,11 +91,12 @@ TEST(SortingTestsRestaurantDish, testSortPriceLoHi) {
 }
 
 TEST(SortingTestsRestaurantDish, testSortAToZ) {
+    CampusRestaurant Habit = BuildCampusRestaurants::buildHabit();
     bool isSorted = true;
-    Sorting sort = Sorting::sortAToZRestaurantDish(habitMenu);
+    Habit.setMenu(Sorting::sortAToZRestaurantDish(Habit.getMenu()));
 
-    for (unsigned int = i; i < sort.habitMenu.size(i) - 1; ++i) {
-        if ((sort.habitMenu.at(i)).getName() > (sort.habitMenu.at(i + 1)).getName()) {
+    for (unsigned int i = 0; i < Habit.getMenu().size() - 1; ++i) {
+        if ((Habit.getMenu().at(i)).getName() > (Habit.getMenu().at(i + 1)).getName()) {
             isSorted = false;
         }
     }
@@ -98,11 +105,12 @@ TEST(SortingTestsRestaurantDish, testSortAToZ) {
 }
 
 TEST(SortingTestsRestaurantDish, testSortZToA) {
+    CampusRestaurant Habit = BuildCampusRestaurants::buildHabit();
     bool isSorted = true;
-    Sorting sort = Sorting::sortZToARestaurantDish(habitMenu);
+    Habit.setMenu(Sorting::sortZToARestaurantDish(Habit.getMenu()));
 
-    for (unsigned int = i; i < sort.habitMenu.size(i) - 1; ++i) {
-        if ((sort.habitMenu.at(i)).getName() < (sort.habitMenu.at(i + 1)).getName()) {
+    for (unsigned int i = 0; i < Habit.getMenu().size() - 1; ++i) {
+        if ((Habit.getMenu().at(i)).getName() < (Habit.getMenu().at(i + 1)).getName()) {
             isSorted = false;
         }
     }
@@ -110,81 +118,87 @@ TEST(SortingTestsRestaurantDish, testSortZToA) {
     EXPECT_TRUE(isSorted);
 }
 
-// DiningHallDish Sorting Tests
-// TEST(SortingTestsDiningHallDish, testSortProteinHiLo) {
-//     bool isSorted = true;
-//     Sorting sort = Sorting::sortProteinHiLoDiningHallDish(habitMenu);
+//DiningHallDish Sorting Tests
+TEST(SortingTestsDiningHallDish, testSortProteinHiLo) {
+    DiningHall Glasgow = BuildDiningHalls::buildGlasgow();
+    bool isSorted = true;
+    Glasgow.setMenu(Sorting::sortProteinHiLoDiningHallDish(Glasgow.getMenu()));
 
-//     for (unsigned int = i; i < sort.habitMenu.size(i) - 1; ++i) {
-//         if ((sort.habitMenu.at(i)).getProtein() < (sort.habitMenu.at(i + 1)).getProtein()) {
-//             isSorted = false;
-//         }
-//     }
+    for (unsigned int i = 0; i < Glasgow.getMenu().size() - 1; ++i) {
+        if ((Glasgow.getMenu().at(i)).getProtein() < (Glasgow.getMenu().at(i + 1)).getProtein()) {
+            isSorted = false;
+        }
+    }
 
-//     EXPECT_TRUE(isSorted);
-// }
+    EXPECT_TRUE(isSorted);
+}
 
-// TEST(SortingTestsDiningHallDish, testSortProteinLoHi) {
-//     bool isSorted = true;
-//     Sorting sort = Sorting::sortProteinLoHiDiningHallDish(habitMenu);
+TEST(SortingTestsDiningHallDish, testSortProteinLoHi) {
+    DiningHall Glasgow = BuildDiningHalls::buildGlasgow();
+    bool isSorted = true;
+    Glasgow.setMenu(Sorting::sortProteinLoHiDiningHallDish(Glasgow.getMenu()));
 
-//     for (unsigned int = i; i < sort.habitMenu.size(i) - 1; ++i) {
-//         if ((sort.habitMenu.at(i)).getProtein() > (sort.habitMenu.at(i + 1)).getProtein()) {
-//             isSorted = false;
-//         }
-//     }
+    for (unsigned int i = 0; i < Glasgow.getMenu().size() - 1; ++i) {
+        if ((Glasgow.getMenu().at(i)).getProtein() > (Glasgow.getMenu().at(i + 1)).getProtein()) {
+            isSorted = false;
+        }
+    }
 
-//     EXPECT_TRUE(isSorted);
-// }
+    EXPECT_TRUE(isSorted);
+}
 
-// TEST(SortingTestsDiningHallDish, testSortCaloriesHiLo) {
-//     bool isSorted = true;
-//     Sorting sort = Sorting::sortCaloriesHiLoDiningHallDish(habitMenu);
+TEST(SortingTestsDiningHallDish, testSortCaloriesHiLo) {
+    DiningHall Glasgow = BuildDiningHalls::buildGlasgow();
+    bool isSorted = true;
+    Glasgow.setMenu(Sorting::sortCaloriesHiLoDiningHallDish(Glasgow.getMenu()));
 
-//     for (unsigned int = i; i < sort.habitMenu.size(i) - 1; ++i) {
-//         if ((sort.habitMenu.at(i)).getCalories() < (sort.habitMenu.at(i + 1)).getCalories()) {
-//             isSorted = false;
-//         }
-//     }
+    for (unsigned int i = 0; i < Glasgow.getMenu().size() - 1; ++i) {
+        if ((Glasgow.getMenu().at(i)).getCalories() < (Glasgow.getMenu().at(i + 1)).getCalories()) {
+            isSorted = false;
+        }
+    }
 
-//     EXPECT_TRUE(isSorted);
-// }
+    EXPECT_TRUE(isSorted);
+}
 
-// TEST(SortingTestsDiningHallDish, testSortCaloriesLoHi) {
-//     bool isSorted = true;
-//     Sorting sort = Sorting::sortCaloriesLoHiDiningHallDish(habitMenu);
+TEST(SortingTestsDiningHallDish, testSortCaloriesLoHi) {
+    DiningHall Glasgow = BuildDiningHalls::buildGlasgow();
+    bool isSorted = true;
+    Glasgow.setMenu(Sorting::sortCaloriesLoHiDiningHallDish(Glasgow.getMenu()));
 
-//     for (unsigned int = i; i < sort.habitMenu.size(i) - 1; ++i) {
-//         if ((sort.habitMenu.at(i)).getProtein() > (sort.habitMenu.at(i + 1)).getProtein()) {
-//             isSorted = false;
-//         }
-//     }
+    for (unsigned int i = 0; i < Glasgow.getMenu().size() - 1; ++i) {
+        if ((Glasgow.getMenu().at(i)).getCalories() > (Glasgow.getMenu().at(i + 1)).getCalories()) {
+            isSorted = false;
+        }
+    }
 
-//     EXPECT_TRUE(isSorted);
-// }
+    EXPECT_TRUE(isSorted);
+}
 
-// TEST(SortingTestsDiningHallDish, testSortAToZ) {
-//     bool isSorted = true;
-//     Sorting sort = Sorting::sortAToZDiningHallDish(habitMenu);
+TEST(SortingTestsDiningHallDish, testSortAToZ) {
+    DiningHall Glasgow = BuildDiningHalls::buildGlasgow();
+    bool isSorted = true;
+    Glasgow.setMenu(Sorting::sortAToZDiningHallDish(Glasgow.getMenu()));
 
-//     for (unsigned int = i; i < sort.habitMenu.size(i) - 1; ++i) {
-//         if ((sort.habitMenu.at(i)).getName() > (sort.habitMenu.at(i + 1)).getName()) {
-//             isSorted = false;
-//         }
-//     }
+    for (unsigned int i = 0; i < Glasgow.getMenu().size() - 1; ++i) {
+        if ((Glasgow.getMenu().at(i)).getName() > (Glasgow.getMenu().at(i + 1)).getName()) {
+            isSorted = false;
+        }
+    }
 
-//     EXPECT_TRUE(isSorted);
-// }
+    EXPECT_TRUE(isSorted);
+}
 
-// TEST(SortingTestsDiningHallDish, testSortZToA) {
-//     bool isSorted = true;
-//     Sorting sort = Sorting::sortZToADiningHallDish(habitMenu);
+TEST(SortingTestsDiningHallDish, testSortZToA) {
+    DiningHall Glasgow = BuildDiningHalls::buildGlasgow();
+    bool isSorted = true;
+    Glasgow.setMenu(Sorting::sortZToADiningHallDish(Glasgow.getMenu()));
 
-//     for (unsigned int = i; i < sort.habitMenu.size(i) - 1; ++i) {
-//         if ((sort.habitMenu.at(i)).getName() < (sort.habitMenu.at(i + 1)).getName()) {
-//             isSorted = false;
-//         }
-//     }
+    for (unsigned int i = 0; i < Glasgow.getMenu().size() - 1; ++i) {
+        if ((Glasgow.getMenu().at(i)).getName() < (Glasgow.getMenu().at(i + 1)).getName()) {
+            isSorted = false;
+        }
+    }
 
-//     EXPECT_TRUE(isSorted);
-// }
+    EXPECT_TRUE(isSorted);
+}

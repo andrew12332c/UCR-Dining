@@ -12,9 +12,11 @@ class CampusRestaurant : public Restaurant {
     CampusRestaurant(string name, string location, vector<RestaurantDish> menu);
     void addMenuItem(RestaurantDish dish);
     void removeMenuItem(const string& dish);
-    string getMenu();
+    void setMenu(const vector<RestaurantDish>& newMenu);
+    string getMenuList();
+    vector<RestaurantDish>& getMenu();
 
-  private:
+  protected:
     vector<RestaurantDish> menu;
 };
 
