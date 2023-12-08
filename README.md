@@ -151,9 +151,6 @@ The project was tested with unit tests. Gtest was used extensively for each impl
 ![SortingRestaurantDish Tests](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/33934202-2be3-43e6-ba54-7d86b33d1762)
 ![SortingDiningHallDish Tests](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/54982014-736f-4542-b627-84ee3f584785)
 
-
-
-
-
-
-
+## Valgrind
+Valgrind was used to ensure no memory leaks occur:
+![CS100 Valgrind Memcheck](https://github.com/cs100/final-project-awong230-azhan128-bta011-mcoll041/assets/56686278/c6763524-2086-4d98-9fdb-f9b784bdbb32)
